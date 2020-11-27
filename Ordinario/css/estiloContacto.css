@@ -1,0 +1,122 @@
+.container{
+    border-radius: 5px;
+    /*background:linear-gradient(0deg, rgba(34,193,195,0.8) 20%, rgba(255,171,13,0.8) 78%); */
+    /*background: radial-gradient(circle, rgba(238,174,202,0.5) 0%, rgba(111,153,197,0.5) 100%);     */
+    /*background: rgb(0, 255, 200);*/
+    padding: 20px;
+}
+
+body{
+    background-color: rgb(211, 139, 139);
+    color: white;
+}
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.col-100{
+    float: left;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.row2{
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+
+.boton{
+    padding-top: 15px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+input[type=text],input[type=email],input[type=tel],textarea{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: monospace;
+} 
+
+select{
+    width: 82%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: monospace;
+}
+
+label {
+    padding: 12px 12px 12px 0;/*padding-top, padding-right, padding-bottom, and padding-left*/
+    display: inline-block;/*crear una cuadrícula de cajas que llene el navegador armoniosamente*/
+    float: right;
+} 
+
+.row2{
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+
+.boton{
+    padding-top: 15px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.mayusculas{
+    text-transform: uppercase;
+}
+
+input[type=submit], input[type=reset]{
+	background-color: #17ac1c;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float:  right;
+}
+
+.btn-group button {
+    background-color: #4CAF50; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    align-items: center;
+}
+  
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+  
+  /* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+#inicio{
+    background-color: rgb(19, 190, 233);
+}
