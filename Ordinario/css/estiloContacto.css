@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: rgb(211, 139, 139);
+    
     color: white;
 }
 .col-25{
@@ -89,7 +89,7 @@ label {
 }
 
 input[type=submit], input[type=reset]{
-	background-color: #17ac1c;
+	background-color: #1fdb25;
 	color: white;
 	padding: 12px 20px;
 	border: none;
@@ -99,7 +99,7 @@ input[type=submit], input[type=reset]{
 }
 
 .btn-group button {
-    background-color: #4CAF50; /* Green background */
+    background-color: #21c027; /* Green background */
     border: 1px solid green; /* Green border */
     color: white; /* White text */
     padding: 10px 24px; /* Some padding */
@@ -115,8 +115,8 @@ input[type=submit], input[type=reset]{
   
   /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #3e8e41;
+    background-color: #35d43a;
 }
 #inicio{
-    background-color: rgb(19, 190, 233);
+    background-color: rgb(28, 99, 206);
 }

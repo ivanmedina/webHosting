@@ -8,318 +8,324 @@ padding: 0;
 box-sizing: border-box
 }
 
-#contenedor{
-	height: 900px;
-	width: 1400px;
-	margin-right: auto;
-	margin-left: auto;
+* {box-sizing: border-box}
 
-}
-header{
-background-image: url("imagenes/header_02.png");
-width: 1280px;
-height: 150px;
-margin: auto;
-position: relative;
-object-fit: cover;
 
-}
-#banner{
-	background-image: url("imagenes/banner.png" );
-	height: 300px;
+
+@media screen and (min-width: 760px){
+
+	#contenedor{
+		height: 900px;
+		width: 1400px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	header{
+	background-image: url("imagenes/header_02.png");
 	width: 1280px;
-	margin-left: 60px;
-	object-fit: cover;
-
-}
-#noticias{
-	background-image: url("imagenes/noticias.png");
-	width: 1280px;
-	height: 830px;
+	height: 150px;
 	margin: auto;
-	object-fit: cover;
-}
-
-footer{
-	background-image: url("imagenes/footer.png");
-	width: 1280px;
-	height: 220px;
-	margin: auto;
-	object-fit: cover;
-}
-
-#mapa{
-	padding: 0%;
-	margin-left: 450px;
-	margin-top: 150px;
-	object-fit: cover;
-	position: absolute;	
-}
-.name, .correo, #enviar{
-	padding: 0%;
-	margin-left: 660px;
-	margin-top: 70px;
-	object-fit: cover;
-	width: 300px;	
-	height: 30px;
-	position: absolute;
-}
-.correo{
-	margin-left: 660px;
-	margin-top: 130px;
-	object-fit: cover;
-	width: 300px;	
-	height: 30px;
-}
-.sugerencia{
-	margin-top: 70px;
-	margin-left: 990px;
-	object-fit: cover;
-	width: 250px;	
-	height: 100px;
-	position: absolute;
-}
-#preguntas, #resellers,#tec, #mas, #dominios,#centro,#porque,#poliza,#servidor,#web,#admministrador{
-	margin-top: 595px;
-	margin-left: 15px;
-	object-fit: cover;
-	position: absolute;
-}
-
-#counterVisitas, #counterConected{
-	margin-top: 595px;
-	margin-left: 15px;
-	object-fit: cover;
 	position: relative;
-}
+	object-fit: cover;
 
-#resellers{
-	margin-top:535px ;
-}
-#tec{
-	margin-top: 480px;
-}
-#mas{
-	margin-top: 425px;
-}
-#dominios{
-	margin-top: 370px;
-}
-#centro{
-	margin-top: 315px;;
-}
-#porque{
-	margin-top: 260px;
-}
-#poliza{
-	margin-top: 205px;
-}
-#servidor{
-	margin-top: 150px;
-}
-#web{
-	margin-top: 95px;
-}
-.administrador{
-	margin-top:1085px ;
-}
-#avanzado , #no_limite, #basico, #starter{
-	margin-top: 560px;
-	margin-left: 650px;
-	object-fit: cover;
-	position: absolute;
-	
-	font-style:italic;
-    font-weight:bold;
-    font-size:15px;
-	font-family:'Helvetica','Verdana','Monaco',sans-serif;
-	line-height:20px;
-}
-#costo_avanzado, #anterior_avanzado, #costo_no_limite, #anterior_no_limite, #anterior_basico, #costo_basico, #costo_starter, #anterior_starter{
-	margin-top: 530px;
-	margin-left: 790px;
-	object-fit: cover;
-	position: absolute;
-	
-	font-style:italic;
-    font-weight:bold;
-    font-size:25px;
-	font-family:'Helvetica','Verdana','Monaco',sans-serif;
-}
-#anterior_avanzado, #anterior_no_limite,#anterior_basico, #anterior_starter{
-	margin-top: 480px;
-	margin-left: 790px;
-	object-fit: cover;
-	position: absolute;
-	font-size: 30px;
-}
-#no_limite{
-	margin-left: 280px;
-}
-#costo_no_limite{
-	margin-left: 410px;
-}
-#anterior_no_limite{
-	margin-left: 410px;
-}
-#basico{
-	margin-top: 195px;
-	margin-left: 650px;
-}
-#costo_basico{
-	margin-top: 160px;
-	margin-left: 790px;
-}
-#anterior_basico{
-	margin-top: 95px;
-	margin-left: 800px;
-}
-#starter{
-	margin-top: 195px;
-	margin-left: 300px;
-}
-#costo_starter{
-	margin-top: 160px;
-	margin-left: 400px;
-}
-#anterior_starter{
-	margin-top: 100px;
-	margin-left: 430px;
-	position: absolute;
-}
-#texto{
-	margin-top: 240px;
-	margin-left: 1035px;
-	object-fit: cover;
-	position: absolute;
-	
-	font-style:italic;
-    font-size:13px;
-	font-family:'Helvetica','Verdana','Monaco',sans-serif;
-	line-height:18px;
-}
-#correo_texto{
-	margin-top: 520px;
-	margin-left: 1070px;
-	object-fit: cover;
-	font-weight:bold;
-	position: absolute;
-	
-	font-style:italic;
-    font-size:13px;
-	font-family:'Helvetica','Verdana','Monaco',sans-serif;
-}
-#starter_detalle, #basico_detalle{
-	padding: 0%;
-	margin-top: 370px;
-	margin-left: 390px;
-	object-fit: cover;
-	position: absolute;
-}
-#basico_detalle{
-	margin-left: 770px;	
-}
-#no_limite_detalle, #avanzado_detalle{
-	padding: 0%;
-	margin-top: 770px;
-	margin-left: 390px;
-	object-fit: cover;
-	position: absolute;
-}
-#avanzado_detalle{
-	margin-left: 770px;
-}
-#baner1{
-	margin-top: 70px;
-	margin-left: 180px;
-	object-fit: cover;
-	font-weight:bold;
-	position: absolute;
-	
-	font-style:italic;
-    font-size:20px;
-	font-family:'Helvetica','Verdana','Monaco',sans-serif;
-	color: white;
-	line-height:30px;
-}
-#enviar{
-margin-top: 170px;
-}
-#soluciones{
-	margin-left: 795px;
-	position: relative;
-}
-#sfcmx6gc8ds8j6j7pkuu9qe1srrqerptduh{
-	margin-top: 242px;
-	margin-left: 370px;
-	object-fit: cover;
-	position: absolute;	
-}
-#ver{
-	margin-top: 400px;
-	margin-left: 550px;
-	object-fit: cover;
-	position: absolute;		
-}
-#clientes{
-	top: 105px;
-	margin-left: 935px;
-	position: absolute;
-}
-#contacto{
-	margin-top: 105px;
-	margin-left: 1060px;
-	position: static;
-}
-#compañia{
-	top: 105px;
-	margin-left: 540px;
-	position: absolute;
-}
-#soluciones{
-	top: 105px;
-	margin-left: 800px;
-	position: absolute;
-}
-#servicios{
-	top: 105px;
-	margin-left: 670px;
-	position: absolute;
-}
+	}
+	#banner{
+		background-image: url("imagenes/banner.png" );
+		height: 300px;
+		width: 1280px;
+		margin-left: 60px;
+		object-fit: cover;
 
-table{
-	border-collapse: collapse;
-	border: black 1px solid;
-	background-color: rgb(107, 20, 20);
-	color: white;
+	}
+	#noticias{
+		background-image: url("imagenes/noticias.png");
+		width: 1280px;
+		height: 830px;
+		margin: auto;
+		object-fit: cover;
+	}
+
+	footer{
+		background-image: url("imagenes/footer.png");
+		width: 1280px;
+		height: 220px;
+		margin: auto;
+		object-fit: cover;
+	}
+
+	#mapa{
+		padding: 0%;
+		margin-left: 450px;
+		margin-top: 150px;
+		object-fit: cover;
+		position: absolute;	
+	}
+	.name, .correo, #enviar{
+		padding: 0%;
+		margin-left: 660px;
+		margin-top: 70px;
+		object-fit: cover;
+		width: 300px;	
+		height: 30px;
+		position: absolute;
+	}
+	.correo{
+		margin-left: 660px;
+		margin-top: 130px;
+		object-fit: cover;
+		width: 300px;	
+		height: 30px;
+	}
+	.sugerencia{
+		margin-top: 70px;
+		margin-left: 990px;
+		object-fit: cover;
+		width: 250px;	
+		height: 100px;
+		position: absolute;
+	}
+	#preguntas, #resellers,#tec, #mas, #dominios,#centro,#porque,#poliza,#servidor,#web,#admministrador{
+		margin-top: 595px;
+		margin-left: 15px;
+		object-fit: cover;
+		position: absolute;
+	}
+
+	#counterVisitas, #counterConected{
+		margin-top: 595px;
+		margin-left: 15px;
+		object-fit: cover;
+		position: relative;
+	}
+
+	#resellers{
+		margin-top:535px ;
+	}
+	#tec{
+		margin-top: 480px;
+	}
+	#mas{
+		margin-top: 425px;
+	}
+	#dominios{
+		margin-top: 370px;
+	}
+	#centro{
+		margin-top: 315px;;
+	}
+	#porque{
+		margin-top: 260px;
+	}
+	#poliza{
+		margin-top: 205px;
+	}
+	#servidor{
+		margin-top: 150px;
+	}
+	#web{
+		margin-top: 95px;
+	}
+	.administrador{
+		margin-top:1085px ;
+	}
+	#avanzado , #no_limite, #basico, #starter{
+		margin-top: 560px;
+		margin-left: 650px;
+		object-fit: cover;
+		position: absolute;
+
+		font-style:italic;
+	    font-weight:bold;
+	    font-size:15px;
+		font-family:'Helvetica','Verdana','Monaco',sans-serif;
+		line-height:20px;
+	}
+	#costo_avanzado, #anterior_avanzado, #costo_no_limite, #anterior_no_limite, #anterior_basico, #costo_basico, #costo_starter, #anterior_starter{
+		margin-top: 530px;
+		margin-left: 790px;
+		object-fit: cover;
+		position: absolute;
+
+		font-style:italic;
+	    font-weight:bold;
+	    font-size:25px;
+		font-family:'Helvetica','Verdana','Monaco',sans-serif;
+	}
+	#anterior_avanzado, #anterior_no_limite,#anterior_basico, #anterior_starter{
+		margin-top: 480px;
+		margin-left: 790px;
+		object-fit: cover;
+		position: absolute;
+		font-size: 30px;
+	}
+	#no_limite{
+		margin-left: 280px;
+	}
+	#costo_no_limite{
+		margin-left: 410px;
+	}
+	#anterior_no_limite{
+		margin-left: 410px;
+	}
+	#basico{
+		margin-top: 195px;
+		margin-left: 650px;
+	}
+	#costo_basico{
+		margin-top: 160px;
+		margin-left: 790px;
+	}
+	#anterior_basico{
+		margin-top: 95px;
+		margin-left: 800px;
+	}
+	#starter{
+		margin-top: 195px;
+		margin-left: 300px;
+	}
+	#costo_starter{
+		margin-top: 160px;
+		margin-left: 400px;
+	}
+	#anterior_starter{
+		margin-top: 100px;
+		margin-left: 430px;
+		position: absolute;
+	}
+	#texto{
+		margin-top: 240px;
+		margin-left: 1035px;
+		object-fit: cover;
+		position: absolute;
+
+		font-style:italic;
+	    font-size:13px;
+		font-family:'Helvetica','Verdana','Monaco',sans-serif;
+		line-height:18px;
+	}
+	#correo_texto{
+		margin-top: 520px;
+		margin-left: 1070px;
+		object-fit: cover;
+		font-weight:bold;
+		position: absolute;
+
+		font-style:italic;
+	    font-size:13px;
+		font-family:'Helvetica','Verdana','Monaco',sans-serif;
+	}
+	#starter_detalle, #basico_detalle{
+		padding: 0%;
+		margin-top: 370px;
+		margin-left: 390px;
+		object-fit: cover;
+		position: absolute;
+	}
+	#basico_detalle{
+		margin-left: 770px;	
+	}
+	#no_limite_detalle, #avanzado_detalle{
+		padding: 0%;
+		margin-top: 770px;
+		margin-left: 390px;
+		object-fit: cover;
+		position: absolute;
+	}
+	#avanzado_detalle{
+		margin-left: 770px;
+	}
+	#baner1{
+		margin-top: 70px;
+		margin-left: 180px;
+		object-fit: cover;
+		font-weight:bold;
+		position: absolute;
+
+		font-style:italic;
+	    font-size:20px;
+		font-family:'Helvetica','Verdana','Monaco',sans-serif;
+		color: white;
+		line-height:30px;
+	}
+	#enviar{
+	margin-top: 170px;
+	}
+	#soluciones{
+		margin-left: 795px;
+		position: relative;
+	}
+	#sfcmx6gc8ds8j6j7pkuu9qe1srrqerptduh{
+		margin-top: 242px;
+		margin-left: 370px;
+		object-fit: cover;
+		position: absolute;	
+	}
+	#ver{
+		margin-top: 400px;
+		margin-left: 550px;
+		object-fit: cover;
+		position: absolute;		
+	}
+	#clientes{
+		top: 105px;
+		margin-left: 935px;
+		position: absolute;
+	}
+	#contacto{
+		margin-top: 105px;
+		margin-left: 1060px;
+		position: static;
+	}
+	#compañia{
+		top: 105px;
+		margin-left: 540px;
+		position: absolute;
+	}
+	#soluciones{
+		top: 105px;
+		margin-left: 800px;
+		position: absolute;
+	}
+	#servicios{
+		top: 105px;
+		margin-left: 670px;
+		position: absolute;
+	}
+
+	table{
+		border-collapse: collapse;
+		border: black 1px solid;
+		background-color: rgb(107, 20, 20);
+		color: white;
+	}
+	td,th{
+		padding: 10px;
+	}
+
+	#nombreContacto, #apellidoContacto{
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		resize: vertical;
+	}
+
+	#admin{
+		margin-top: 20px;
+		margin-left: 20px;
+		object-fit: cover;
+		position: absolute;
+		padding: 12px 80px;
+		background-color: rgb(224, 181, 40);
+		font-weight: bolder;
+		border-radius: 10px;
+
+	}
+
+
+
+
 }
-td,th{
-	padding: 10px;
-}
-
-#nombreContacto, #apellidoContacto{
-	width: 100%;
-	padding: 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	resize: vertical;
-}
-
-#admin{
-	margin-top: 20px;
-	margin-left: 20px;
-	object-fit: cover;
-	position: absolute;
-	padding: 12px 80px;
-	background-color: rgb(224, 181, 40);
-	font-weight: bolder;
-	border-radius: 10px;
-
-}
-
-
-
-
-
 
 

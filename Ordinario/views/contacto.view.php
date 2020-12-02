@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/estiloContacto.css">
 	<title>The Web Hosting</title>
 </head>
-
+<body background="../css/imagenes/fondo.png">
 
 <!--<body background="../css/imagenes/fondo.png">-->
 <div class="container" style="margin-top: 60px;">
@@ -101,8 +101,8 @@
 	<div class="row2">
 		<div class="boton">
 			<div class="btn-group">
-			<a href=""><button type="button" class="btn btn-secondary btn-lg btn-block">ENVIAR</button><br>
-			<a href="Web_Hosting.view.php"><button id="inicio" type="button" class="btn btn-secondary btn-lg btn-block">INICIO</button>
+			<button type="button" class="btn btn-secondary btn-lg btn-block">ENVIAR</button><br>
+			<a href="Web_Hosting.view.php"><button id="inicio" type="button" class="btn btn-secondary btn-lg btn-block" href="Web_Hosting.view.php">INICIO</button>
 			</div>
 		</div>
 	</div>

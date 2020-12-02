@@ -1,46 +1,36 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta content="text/html; charset=ANSI" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../css/estilos.css">   
-
-    
+    <link rel="stylesheet" href="../css/estilos.css">       
 </head>
 
 <body background="../css/imagenes/fondo.png">
 <section id="contenedor">
-<a id="ver" href="../bs-slider/index.php">
+    <a id="ver" href="../bs-slider/index.php">
 
-<picture>
-  <source media="(min-width: 800px)" srcset="../css/imagenes/ver_mas.png">
-  <img src="../css/imagenes/ver_mas.png" alt="Ejemplo">
+    <picture>
+        <!-- BOTON VER MAS BANNER -->
+        <source media="(min-width: 800px)" srcset="../css/imagenes/ver_mas.png">
+        <img src="../css/imagenes/ver_mas.png" alt="Ejemplo">
 
-<header>
-<a href="../views/compañia.php">
-            <img id="compañia" src="../css/imagenes/compañia.png">
-        </a>
-        <a href="../views/servicios.php">
-            <img id="servicios" src="../css/imagenes/servicios.png">
-        </a>
-<a href="../views/soluciones.php">
-            <img id="soluciones" src="../css/imagenes/soluciones.png">
-        </a>
-<a href="../views/cliente_p.php">
-            <img id="clientes" src="../css/imagenes/clientes.png"> 
-        </a>
-
-        <a href="../views/contacto.view.php">
-            <img id="contacto" src="../css/imagenes/contacto.png">
-        </a>    
-</header>
+        <!-- BOTONES ENCABEZADO | COMPAÑIA, SERVICIOS, SOLUCIONES, CLIENTES, CONTACTO -->
+        <header>
+            <a href="../views/compañia.php"><img id="compañia" src="../css/imagenes/compañia.png"></a>
+            <a href="../views/servicios.php"><img id="servicios" src="../css/imagenes/servicios.png"></a>
+            <a href="../views/soluciones.php"><img id="soluciones" src="../css/imagenes/soluciones.png"></a>
+            <a href="../views/cliente_p.php"><img id="clientes" src="../css/imagenes/clientes.png"> </a>
+            <a href="../views/contacto.view.php"><img id="contacto" src="../css/imagenes/contacto.png"></a>    
+        </header>
     </picture>
-
-&nbsp&nbsp
-    <center>
+        &nbsp&nbsp
+    
+        <center>
     <section id="SliderTest_Container" class="col-md-8">
         <div id="Carousel-AutosGTA" class="carousel slide" data-ride="carousel">
             <?php

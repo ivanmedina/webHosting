@@ -30,33 +30,26 @@
 </head>
 <body background="../css/imagenes/fondo.png">
 <section id="contenedor">
-<a id="ver" href="../bs-slider/index.php">
+	<a id="ver" href="../bs-slider/index.php">
 
-<picture>
-	<source media="(min-width: 800px)" srcset="../css/imagenes/ver_mas.png">
-	<img src="../css/imagenes/ver_mas.png" alt="Ejemplo">
+	<picture>
+		<!-- BOTON VER MAS -> BANNER -->
+		<source media="(min-width: 800px)" srcset="../css/imagenes/ver_mas.png">
+		<img src="../css/imagenes/ver_mas.png" alt="Ejemplo">
 
-<header>
-	<a href="compa.php">
-				<img id="compañia" src="../css/imagenes/compañia.png">
-			</a>
-			<a href="servicios.php">
-				<img id="servicios" src="../css/imagenes/servicios.png">
-			</a>
-	<a href="soluciones.php">
-				<img id="soluciones" src="../css/imagenes/soluciones.png">
-			</a>
-	<a href="cliente_p.php">
-				<img id="clientes" src="../css/imagenes/clientes.png"> 
-			</a>
-		
-			<a href="contacto.view.php">
-				<img id="contacto" src="../css/imagenes/contacto.png">
-			</a> 	
-</header>
-</picture>
+		<!-- BOTONES BANNER SUPERIOR | COMPAÑIA-SERVICIOS-SOLUCIONES-CLIENTES-CONTACTO-->
+		<header>
+			<a href="compa.php"><img id="compañia" src="../css/imagenes/compañia.png"></a>
+			<a href="servicios.php"><img id="servicios" src="../css/imagenes/servicios.png"></a>
+			<a href="soluciones.php"><img id="soluciones" src="../css/imagenes/soluciones.png"></a>
+			<a href="cliente_p.php"><img id="clientes" src="../css/imagenes/clientes.png"></a>
+			<a href="contacto.view.php"><img id="contacto" src="../css/imagenes/contacto.png"></a> 	
+		</header>
 
-    <section id="banner">
+	</picture>
+	
+	<!-- TEXTO BANNER SUPERIOR -->
+    <section id="banner"> <!-- BANNER FOTO  DESDE CSS -->
 		<pre id="baner1">
 			Ilimitados dominios en el Hosting.
 			Espacio ilimitado.
@@ -66,48 +59,49 @@
 		</pre>
 	</section>
 	
-<section id="noticias">
-	<a href="web.php"><img id="web" src="../css/imagenes/web.png"></a>
-	<a href="servidor.php"><img id="servidor" src="../css/imagenes/servidor.png"></a>
-	<a href="poliza.php"><img id="poliza" src="../css/imagenes/poliza.png"></a>
-	<a href="porque.php"><img id="porque" src="../css/imagenes/porque.png"></a>
-	<a href="centro.php"><img id="centro" src="../css/imagenes/centro_ayuda.png"></a>
-	<a href="dominios.php"><img id="dominios" src="../css/imagenes/dominios.png"></a>
-	<a href="mas.php"><img id="mas" src="../css/imagenes/mas.png"></a>
-	<a href="tec.php"><img id="tec" src="../css/imagenes/tec.png"></a>
-	<a href="resellers.php"><img id="resellers" src="../css/imagenes/resellers.png"></a>
-	<a href="pregunta.php"><img id="preguntas" src="../css/imagenes/preg.png"></a>
+
+	<section id="noticias">
+		<a href="web.php"><img id="web" src="../css/imagenes/web.png"></a>
+		<a href="servidor.php"><img id="servidor" src="../css/imagenes/servidor.png"></a>
+		<a href="poliza.php"><img id="poliza" src="../css/imagenes/poliza.png"></a>
+		<a href="porque.php"><img id="porque" src="../css/imagenes/porque.png"></a>
+		<a href="centro.php"><img id="centro" src="../css/imagenes/centro_ayuda.png"></a>
+		<a href="dominios.php"><img id="dominios" src="../css/imagenes/dominios.png"></a>
+		<a href="mas.php"><img id="mas" src="../css/imagenes/mas.png"></a>
+		<a href="tec.php"><img id="tec" src="../css/imagenes/tec.png"></a>
+		<a href="resellers.php"><img id="resellers" src="../css/imagenes/resellers.png"></a>
+		<a href="pregunta.php"><img id="preguntas" src="../css/imagenes/preg.png"></a>
 
 
 	<div id="anterior_starter" src="../css/imagenes/tacha.png">$500</div>
 	<div id="costo_starter">$250/año</div>
-	<pre id="starter">
-      ¡Todo lo que necesitas para comenzar!
+		<pre id="starter" style="font-size:small">
+    	¡Todo lo que necesitas para comenzar!
 		Transferencia ilimitada.
 		Configuración instantanea.
 		Registro de dominio.
 		Espacio Web: 10GB. 
-	</pre>
+		</pre>
 	<a href="#"><img id="starter_detalle" src="../css/imagenes/detalles.png"></a>		
 
 	<div id="anterior_basico">$955</div>
 	<div id="costo_basico">$455/año</div>
-	<pre id="basico">
-      ¡La mejor solución para grandes proyectos!
+		<pre id="basico" style="font-size:small">
+    	¡La mejor solución para grandes proyectos!
 		Espacio Web: 100GB. 
 		Incluye un dominio gratis.
 		Configuración instantanea.
 		Transferencia ilimitada.
 		Mas de 140 Apps.
 		SiteBuilter con plantillas.
-	</pre>
+		</pre>
 	<a href="#"><img id="basico_detalle" src="../css/imagenes/detalles.png"></a>	
 
 	<div id="anterior_no_limite">$1,598</div>
 	<div id="costo_no_limite">$799/año</div>
-	<pre id="no_limite">
-      ¡Maximo rendimiento para proyectos
-   interactivos y con contenidos dinamicos!
+		<pre id="no_limite" style="font-size:small">
+    	¡Maximo rendimiento para proyectos
+   	interactivos y con contenidos dinamicos!
 		Espacio Web: Ilimitado. 
 		Incluye un dominio gratis.
 		Configuración instantanea.
@@ -116,13 +110,13 @@
 		SiteBuilter con plantillas.
 		Base de datos con MySql: Ilimitadas.
 		Cuentas de correos:Ilimitadas.
-	</pre>
+		</pre>
 	<a href="#"><img id="no_limite_detalle" src="../css/imagenes/detalles.png"></a>
 
 	<div id="anterior_avanzado">$2,988</div>
 	<div id="costo_avanzado">$1,039/año</div>
-	<pre id="avanzado">
-   ¡Un plan superior, ideal para desarrolladores!
+		<pre id="avanzado" style="font-size:small">
+	¡Un plan superior, ideal para desarrolladores!
 		Soporte de expertos en apps. 
 		Espacio Web: Ilimitado.
 		Incluye un dominio gratis.
@@ -132,10 +126,11 @@
 		SiteBuilter con plantillas.
 		Base de datos con MySql: Ilimitadas.
 		Cuentas de correos:Ilimitadas.
-	</pre>
+		</pre>
 	<a href="#"><img id="avanzado_detalle" src="../css/imagenes/detalles.png"></a>
 
-	<pre id="texto">
+	<!-- ********* TEXTO LATERAL DERECHO ********** -->
+	<pre id="texto" style="font-size:smaller">
   La maxima calidad de hosting al mejor
   precio. Los planes incluyen todo lo
   necesitas: Mayor rendimiento y
@@ -159,12 +154,10 @@
 	<br>
 	<!-- BOTON ADMINISTRADOR PARA INGRESAR A LOGIN -->
 	<!--<font size="5px"> <a id="administrador" href="login.php" style="color:white">  &nbsp&nbsp Administrador</a> </font>-->
-	<a href="login.php"><button id="admin" type="button" class="btn btn-secondary">Login</button></a>
+	<a href="login.php"><button id="admin" type="button" class="btn btn-secondary">Login</button></a><br>
+	</section>
 
-	<br>
-</section>
-
-<!-- footer solamente parte inferior derecha -->
+	<!-- footer solamente parte inferior derecha -->
     <footer>
 		<a id="mapa" href="mapa.view.php">
             <img src="../css/imagenes/maps.png" alt="">
@@ -190,12 +183,13 @@
 		</form>
 	</footer>
 
- </section>
-		<form class="contador" >
+</section>
+		
+	<form class="contador" >
 		<!--<div id="sfcmx6gc8ds8j6j7pkuu9qe1srrqerptduh"></div><script type="text/javascript" src="https://counter6.wheredoyoucomefrom.ovh/private/counter.js?c=mx6gc8ds8j6j7pkuu9qe1srrqerptduh&down=async" async></script><br><a href="https://www.contadorvisitasgratis.com"></a><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas gratis"><img src="https://counter6.wheredoyoucomefrom.ovh/private/contadorvisitasgratis.php?c=mx6gc8ds8j6j7pkuu9qe1srrqerptduh" border="0" title="contador de visitas gratis" alt="contador de visitas gratis"></a></noscript>-->
 		<div id="sfc9wc5kytqxxlbxb9q1g3sn7n6pm3ztk2e"></div> 
-		<script type="text/javascript" src="https://counter3.stat.ovh/private/counter.js?c=9wc5kytqxxlbxb9q1g3sn7n6pm3ztk2e&down=async" async></script>
+			<script type="text/javascript" src="https://counter3.stat.ovh/private/counter.js?c=9wc5kytqxxlbxb9q1g3sn7n6pm3ztk2e&down=async" async></script>
 		<br><a href="https://www.contadorvisitasgratis.com"></a><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para joomla"><img src="https://counter3.stat.ovh/private/contadorvisitasgratis.php?c=9wc5kytqxxlbxb9q1g3sn7n6pm3ztk2e" border="0" title="contador de visitas para joomla" alt="contador de visitas para joomla"></a></noscript>
-		</form>
+	</form>
 </body>
 </html>
