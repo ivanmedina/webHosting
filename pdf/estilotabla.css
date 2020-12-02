@@ -1,0 +1,29 @@
+h1 {
+	text-align: center;
+	font-style: italic;
+	font-size: 35;
+	color:black;
+}
+p{
+	font-size: 25;
+}
+body{
+	background: white ;
+}
+table{
+	font-size: 10;
+	border-collapse: separate;
+}
+colgroup{
+	border: 5px black solid;
+}
+table#space {
+	border-collapse: separate;
+	border-spacing: 250px 155px;
+}
+.both{
+	border-collapse: separate;
+	border-spacing: 5px 10px;
+	border: 1px solid #000;
+
+}
