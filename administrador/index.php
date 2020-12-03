@@ -19,26 +19,16 @@
 	<title>The Web Hosting</title>
 </head>
 <header>
-    <a href="compa.php">
-        <img id="compañia" src="../css/imagenes/compañia.png">
-    </a>
-    <a href="servicios.php">
-        <img id="servicios" src="../css/imagenes/servicios.png">
-    </a>
-    <a href="soluciones.php">
-         <img id="soluciones" src="../css/imagenes/soluciones.png">
-    </a>
-    <a href="cliente_p.php">
-        <img id="clientes" src="../css/imagenes/clientes.png"> 
-    </a>
-    <a href="contacto.view.php">
-        <img id="contacto" src="../css/imagenes/contacto.png">
-    </a>
+    <a href="compa.php"><img id="compañia" <!--src="../css/imagenes/compañia.png"-->></a>
+    <a href="servicios.php"><img id="servicios" <!--src="../css/imagenes/servicios.png"-->></a>
+    <a href="soluciones.php"><img id="soluciones" <!--src="../css/imagenes/soluciones.png"-->></a>
+    <a href="cliente_p.php"><img id="clientes" <!--src="../css/imagenes/clientes.png"-->></a>
+    <a href="contacto.view.php"><img id="contacto" <!--src="../css/imagenes/contacto.png"-->></a>
 
 <body background="../css/imagenes/fondo.png">
     
-    <div >
-        <h1 style="margin:0;">Bienvenido administrador</h1>
+    <div id= "titulo">
+        <center><h1 style="margin:30px;">Bienvenido administrador</h1></center>
     </div>
     <div id="datetime">
         <h2 id="date" style="margin:0;">
