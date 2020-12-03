@@ -87,34 +87,18 @@ if(isset($_REQUEST['action']))
 
 	<title>The Web Hosting</title>
 </head>
-<header>
-    <a href="compa.php">
-        <img id="compañia" src="./../css/imagenes/compañia.png">
-    </a>
-    <a href="servicios.php">
-        <img id="servicios" src="./../css/imagenes/servicios.png">
-    </a>
-    <a href="soluciones.php">
-         <img id="soluciones" src="./../css/imagenes/soluciones.png">
-    </a>
-    <a href="cliente_p.php">
-        <img id="clientes" src="./../css/imagenes/clientes.png"> 
-    </a>
-    <a href="contacto.view.php">
-        <img id="contacto" src="./../css/imagenes/contacto.png">
-    </a>
+
 
 <body background="./../css/imagenes/fondo.png">
-    <div >
-        <h1 style="margin:0;">Bienvenido administrador</h1>
+    <div id= "titulo">
+        <center><h1 style="margin:30px;">Bienvenido administrador</h1></center>
     </div>
-
-    <div id="datetime">
+    <center> <div id="datetime" >
         <h2 id="date" style="margin:0;">
         </h2>
         <h3 id="clock" style="margin:0;">
         </h3>
-    </div>
+    </div></center>
 
     <div>
         <h4 style="margin-top:20px;"> <a href="./admin.php">Adminstrador</a> > <a href="./admin_servicios.php">Servicios</a> > Ver servicios</h4>
