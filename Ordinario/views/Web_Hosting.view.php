@@ -31,7 +31,7 @@
 <body background="../css/imagenes/fondo.png">
 <section id="contenedor">
 	<a id="ver" href="../bs-slider/index.php">
-
+	
 	<picture>
 		<!-- BOTON VER MAS -> BANNER -->
 		<source media="(min-width: 800px)" srcset="../css/imagenes/ver_mas.png">
@@ -48,16 +48,72 @@
 
 	</picture>
 	
+	<style>
+		.mySlides {display:none}
+		.w3-left, .w3-right, .w3-badge {cursor:pointer}
+		.w3-badge {height:13px;width:13px;padding:0;}
+		.w3-center{
+			text-align: right;
+			margin-top: -170px;
+			font-size: xx-large;
+		}
+	</style>
+	
 	<!-- TEXTO BANNER SUPERIOR -->
-    <section id="banner"> <!-- BANNER FOTO  DESDE CSS -->
+	<section id="banner"> <!-- BANNER FOTO  DESDE CSS -->
+		<div id= "slider" class="w3-content w3-display-container" style="max-width:800px">
+  			<img id = "pic" class="mySlides" src="../css/imagenes/banner.png" style="width:160%">
+			<img id = "pic" class="mySlides" src="../css/imagenes/banner12.png" style="width:160%">
+			<img id = "pic" class="mySlides" src="../css/imagenes/banner13.jpg" style="width:160%">
+			<img id = "pic" class="mySlides" src="../css/imagenes/banner8.jpg" style="width:160%">
+		
+		</div>
+		<div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    			<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    			<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    			<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    			<span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  		</div>
+		
+		<!--
 		<pre id="baner1">
 			Ilimitados dominios en el Hosting.
 			Espacio ilimitado.
 			Ilimitada transferencia de archivos.
 			Ilimitadas cuentas de correo.
 			Gratis un nombre de dominio.
-		</pre>
+		</pre> -->
 	</section>
+
+<script>
+
+	var slideIndex = 1;
+	showDivs(slideIndex);
+
+	function plusDivs(n) {
+	  showDivs(slideIndex += n);
+	}
+
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" w3-white", "");
+	  }
+	  x[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " w3-white";
+	}
+</script>
 	
 
 	<section id="noticias">

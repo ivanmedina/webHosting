@@ -7,7 +7,7 @@ class OfertaModel
 	{
 		try
 		{
-			$this->pdo = new PDO('mysql:host=localhost;dbname=bs_slider', 'root', '');
+			$this->pdo = new PDO('mysql:host=localhost;dbname=webHosting', 'user', 'password');
 			$this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);		        
 		}
 		catch(Exception $e)
@@ -176,8 +176,7 @@ class OfertaModel
 					$data->__GET('panel'),
 					$data->__GET('tecnologia'),
 					$data->__GET('soporte'),
-					$data->__GET('vencimiento'),
-					$data->__GET('id')
+					$data->__GET('vencimiento')
 				
 				)
 			);
