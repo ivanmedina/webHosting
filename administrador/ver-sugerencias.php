@@ -1,13 +1,13 @@
 <?php
-require_once 'plan.entidad.php';
-require_once 'plan.model.php';
+require_once 'sugerencia.entidad.php';
+require_once 'sugerencia.model.php';
 
 
 // Logica
-$alm = new Plan();
-$model = new planModel();
-?>
+$alm = new Sugerencia();
+$model = new sugerenciaModel();
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,39 +52,28 @@ $model = new planModel();
     </div>
 
     <div>
-        <h4 style="margin-top:20px;"> <a href="./index.php">Adminstrador</a> > <a href="./admin_planes.php">Planes</a> > Ver planes</h4>
+        <h4 style="margin-top:20px;"> <a href="./index.php">Adminstrador</a> > Sugerencias</a> </h4>
     </div>
-    <div id="planesAdmin" class="row">
+    <div id="serviciosAdmin" class="row">
 
-        <div id="verPlanes" class="col s12">
+        <div id="verServicios" class="col s12">
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">ID</th>
-                        <th style="text-align:left;">USUARIO</th>
-                        <th style="text-align:left;">SERVICIO</th>
-                        <th style="text-align:left;">INCIO</th>
-                        <th style="text-align:left;">FIN</th>
-                        <th></th>
-                        <th></th>
+                        <th style="text-align:left;">id</th>
+                        <th style="text-align:left;">Nombre</th>
+                        <th style="text-align:left;">E-mail</th>
+                        <th style="text-align:left;">Sugerencia</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php foreach($model->Listar() as $r): ?>
+                    <?php foreach($model->Listar() as $r): ?>
                         <tr>
-                        <td><?php echo $r->__GET('id'); ?></td>
-                            <td><?php echo $r->__GET('usuario'); ?></td>
-                            <td><?php echo $r->__GET('oferta'); ?></td>
-                            <td><?php echo $r->__GET('inicio'); ?></td>
-                            <td><?php echo $r->__GET('fin'); ?></td>
-                            <td>
-                                <a href="./editar_plan.php?action=editar&id=<?php echo $r->id; ?>" style="color:black">Editar</a>
-                            </td>
-                            <td>
-                                <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Cancelar</a>
-                            </td>
+                            <td><?php echo $r->__GET('id'); ?></td>
+                            <td><?php echo $r->__GET('nombre'); ?></td>
+                            <td><?php echo $r->__GET('email'); ?></td>
+                            <td><?php echo $r->__GET('sugerencia'); ?></td>
                         </tr>
-
                     <?php endforeach; ?>
                 </tbody>
             </table>   

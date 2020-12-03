@@ -29,7 +29,11 @@ class planModel
 		{
 			$result = array();
 
-			$stm = $this->pdo->prepare("SELECT * FROM planes");
+			$stm = $this->pdo->prepare("SELECT pl.id,us.nombre as usuario,of.nombre as oferta ,pl.inicio,pl.fin
+										FROM planes pl
+										join USUARIOS us on pl.idusuario=us.id
+										join oferta of on pl.idoferta=of.id
+										");
 			$stm->execute();
 
 			foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
@@ -37,12 +41,10 @@ class planModel
 				$alm = new Plan();
 
 				$alm->__SET('id', $r->id);
-				$alm->__SET('idusuario', $r->idusuario);
-				$alm->__SET('idoferta', $r->idoferta);
+				$alm->__SET('usuario', $r->usuario);
+				$alm->__SET('oferta', $r->oferta);
 				$alm->__SET('inicio', $r->inicio);
 				$alm->__SET('fin', $r->fin);
-		
-
 				$result[] = $alm;
 			}
 
@@ -96,5 +98,91 @@ class planModel
 		}
 	}
 
+	public function Obtener($id)
+	{
+		try 
+		{
+			$stm = $this->pdo
+			          ->prepare("SELECT * FROM planes WHERE id = ?");
+			          
+
+			$stm->execute(array($id));
+			$r = $stm->fetch(PDO::FETCH_OBJ);
+
+			$alm = new Plan();
+
+				$alm->__SET('id', $r->id);
+				$alm->__SET('usuario', $r->usuario);
+				$alm->__SET('oferta', $r->oferta);
+				$alm->__SET('inicio', $r->inicio);
+				$alm->__SET('fin', $r->fin);
+
+			return $alm;
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+
+	public function Eliminar($id)
+	{
+		try 
+		{
+			$stm = $this->pdo->prepare("DELETE FROM planes WHERE id = ?");			          
+
+			$stm->execute(array($id));
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+
+	public function Actualizar(Sugerencia $data)
+	{
+		try 
+		{
+			$sql = "UPDATE planes SET 
+						usuario         = ?, 
+						oferta         = ?,
+						inicio        = ?,
+						fin        = ?
+				    WHERE id = ?";
+
+			$this->pdo->prepare($sql)
+			     ->execute(
+				array(
+					$data->__GET('usuario'), 
+					$data->__GET('oferta'), 
+					$data->__GET('inicio'),
+					$data->__GET('fin'),
+					$data->__GET('id')
+					)
+				);
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
+
+	public function Registrar(Plan $data)
+	{		
+		try 
+		{
+		$sql = "INSERT INTO planes (usuario,oferta,inicio,fin) 
+		        VALUES (?, ?, ?)";
+
+		$this->pdo->prepare($sql)->execute(
+			array(
+					$data->__GET('usuario'), 
+					$data->__GET('oferta'),
+					$data->__GET('inicio'),				
+					$data->__GET('fin')				
+				)
+			);
+		} catch (Exception $e) 
+		{
+			die($e->getMessage());
+		}
+	}
 
 }

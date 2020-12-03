@@ -1,13 +1,10 @@
 <?php
-class Plan
+class Sugerencia
 {
 	private $id;
-	private $usuario;
-	private $oferta;
-	private $inicio;
-	private $fin;
-
-
+	private $nombre;
+	private $email;
+	private $sugerencia;
 	
 
 	public function __GET($k){ return $this->$k; }

@@ -88,9 +88,8 @@
             <div class="col s6">
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text row">
-
                         <div class="col s8">
-                            <a href="#">
+                            <a href="./ver-sugerencias.php">
                                 <h3>
                                     Sugerencias
                                 </h3>
