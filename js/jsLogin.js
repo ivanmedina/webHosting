@@ -1,8 +1,8 @@
 var attempt = 3; 
 
 function valida_usuario(){
-var usuario = document.getElementById("usuario").value;
-var contraseña = document.getElementById("contraseña").value;
+var usuario = document.getElementById("user").value;
+var contraseña = document.getElementById("pswrd").value;
 
 if ( usuario == "123" && contraseña == "abcd"){
 alert ("Ingreso correcto");

@@ -1,13 +1,14 @@
 /* Below line is used for online Google font */
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 body{
-	background-color:black;
+	background-color: rgb(211, 139, 139);
 }
 h2{
 padding: 30px 35px;
 margin: -10px -50px;
 text-align:center;
 border-radius: 10px 10px 0 0;
+color:white ;
 }
 hr{
 margin: 10px -50px;
@@ -22,10 +23,10 @@ margin:35px auto;
 font-family: 'Raleway', sans-serif;
 }
 div.main{
-background-color: darkred;
+background-color: rgb(43, 45, 46);
 width: 300px;
 padding: 30px 90px 55px;
-border: 2px solid gray;
+border: 2px solid rgb(212, 24, 24);
 border-radius: 10px;
 font-family: raleway;
 float:left;
@@ -38,7 +39,7 @@ padding: 5px;
 margin-bottom: 25px;
 margin-top: 5px;
 border: 2px solid #ccc;
-color: black;
+color:black;
 font-size: 16px;
 
 }
@@ -52,7 +53,7 @@ center{
 font-size:32px;
 }
 .nota{
-color:red;
+color: white
 
 }
 /*.back{

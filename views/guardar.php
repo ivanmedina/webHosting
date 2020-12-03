@@ -1,14 +1,38 @@
 <?php
+	//conectamos Con el servidor
+	$conectar=@mysql_connect('localhost','root','');
+	//verificamos la conexion
+	if(!$conectar){
+		echo"No Se Pudo Conectar Con El Servidor";
+	}else{
 
-	include_once "./../administrador/sugerencia.entidad.php";
-	include_once "./../administrador/sugerencia.model.php";
-	$sugerencia=new Sugerencia();
-	$model=new sugerenciaModel();
-	$sugerencia->__SET('nombre',$_POST['nombre']);
-	$sugerencia->__SET('email',$_POST['email']);
-	$sugerencia->__SET('sugerencia',$_POST['sugerencia']);
-	$model->Registrar($sugerencia);
-	header('Location: ./Web_Hosting.view.php'); 
+		$base=mysql_select_db('bs_slider');
+		if(!$base){
+			echo"No Se Encontro La Base De Datos";			
+		}
+	}
+	//recuperar las variables
+	$nombre=$_POST['nombre'];
+	$email=$_POST['email'];
+	$sugerencia=$_POST['sugerencia'];
+	//hacemos la sentencia de sql
+	$sql="INSERT INTO sugerencia VALUES('$nombre',
+								   '$email',
+								   '$sugerencia')";
+	//ejecutamos la sentencia de sql
+	$ejecutar=mysql_query($sql);
+	//verificamos la ejecucion
+	if(!$ejecutar){
+		
+		echo "<script>";
+		echo "alert('Hubo algun error')";
+		echo "</script>";
 
+	}else{
+		echo "<script>";
+		echo "alert('Datos Guardados Correctamente')";
+		echo "</script>";
+	}
+
+	include ("Web_Hosting.view.php")
 ?>
-

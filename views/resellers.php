@@ -33,8 +33,9 @@
 		
 
 		<CENTER>
+			<br>
 			<h1>Nuestros Planes de Reseller</h1>
-Nuestros planes de reseller te permiten empezar tu propia empresa de hosting con muy poca inversión y con el respaldo de The best web Hosting
+<h5>Nuestros planes de reseller te permiten empezar tu propia empresa de hosting con muy poca inversión y con el respaldo de The best web Hosting</h5>
 
 <font size="4px">
 <table> <tr> <td>
@@ -111,7 +112,7 @@ Nuestros planes de reseller te permiten empezar tu propia empresa de hosting con
 
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <a href="Web_Hosting.view.php"><button type="button" class="btn btn-success btn-lg btn-block">INICIO</button></a></center></div>
+    <a href="Web_Hosting.view.php"><button type="button" class="btn btn-secondary btn-lg btn-block">INICIO</button></a>
 </section>
 
     </picture>

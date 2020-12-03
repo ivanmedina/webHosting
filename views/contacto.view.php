@@ -1,127 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="../css/estiloContacto.css">
 	<title>The Web Hosting</title>
 </head>
 <body background="../css/imagenes/fondo.png">
 
-<form action="claudiasaldivar493@gmail.com" method="post" enctype="text/plain">
+<!--<body background="../css/imagenes/fondo.png">-->
+<div class="container" style="margin-top: 60px;">
+	<h1 style="text-align: center;">Ingrese sus datos de contacto</h1>
+	
+	<form action="contacto.view.php" method="post" enctype="text/plain">
 
-Nombre: <input type="text" name="nombre" size="25" maxlength="50"><br><br>
+		
+	<div class="row">
+		<div class="col-25">
+			<label for="lnombre">NOMBRE COMPLETO</label>
+			<label id="nombre"></label>
+		</div>
+		<div class="col-75">
+			<input type="text" class="mayusculas" name="inombre" id="inombre" maxlength="13" size="20"  placeholder="Ingrese su NOMBRE COMPLETO" >
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-25">
+			<label for="lemail">EMAIL</label>
+			<label id="email"></label>
+		</div>
+		<div class="col-75">
+			<input type="email" class="mayusculas" name="iemail" id="iemail" maxlength="13" size="20"  placeholder="Ingrese su EMAIL" >
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="col-25">
+			<label for="ledad">EDAD</label>
+			<label id="ledad"></label>
+		</div>
+		<div class="col-75">
+			<input type="tel" class="mayusculas" name="iedad" id="iedad" maxlength="13" size="20"  placeholder="Ingrese su EDAD" >
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-25">
+			<label for="lcur">COMO NOS CONOCISTE?</label>
+		</div>
+		
+		<div class="col-75">
+			<select name="scurso" id="scurso" required oninvalid="this.setCustomValidity('Seleccione un curso')"oninput="setCustomValidity('')">
+				<option value="0">Seleccione una opcion</option>
+				<option value="1">A traves de un amigo</option>
+				<option value="2">A traves de un buscador</option>
+				<option value="3">Navegando por la red</option>
+				<option value="4">Otros</option>
+			</select>
+		</div>
+	</div>
 
-Apellidos: <input type="text" name="apellidos" size="35" maxlength="100">
+	<div class="row">
+		<div class="col-25">
+			<label for="lcur">HORAS QUE NAVEGAS AL DIA?</label>
+		</div>
+		
+		<div class="col-75">
+			<select name="scurso" id="scurso" required oninvalid="this.setCustomValidity('Seleccione un curso')"oninput="setCustomValidity('')">
+				<option value="0">Seleccione una opcion</option>
+				<option value="1">2 horas al dia</option>
+				<option value="2">4 horas al dia</option>
+				<option value="3">Mas de 10 horas al dia</option>
+			</select>
+		</div>
+	</div>
 
-<br><br>
+	<div class="row">
+		<div class="col-25">
+			<label for="lopinion">OPINIONES</label>
+			<label id="lopinion"></label>
+		</div>
+		<div class="col-75">
+			<textarea cols="40" rows="5" name="opinion">Escriba aquí su opinión...</textarea>
+		</div>
+	</div>
 
-Correo electrónico: <input type="text" value="@" name="correo" size="40" maxlength="100">
+	<div class="row">
+		<div class="col-25">
+			<label for="lopinion">SUGERENCIAS</label>
+			<label id="lopinion"></label>
+		</div>
+		<div class="col-75">
+			<textarea cols="40" rows="5" name="opinion">Escriba aquí alguna sugerencia...</textarea>
+		</div>
+	</div>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="10">
+	<div class="row2">
+		<div class="boton">
+			<div class="btn-group">
+			<button type="button" class="btn btn-secondary btn-lg btn-block">ENVIAR</button><br>
+			<a href="Web_Hosting.view.php"><button id="inicio" type="button" class="btn btn-secondary btn-lg btn-block" href="Web_Hosting.view.php">INICIO</button>
+			</div>
+		</div>
+	</div>
 
-<tr>
 
-<td>Edad:
+	</form>
+</div> <!-- CIERRE CONTAINER PRINCIPAL-->
 
-<br>
-
-<input type="radio" name="edad" value="020"> 0-20
-
-<br>
-
-<input type="radio" name="edad" value="2040" checked> 20-40
-
-<br>
-
-<input type="radio" name="edad" value="4060"> 40-60
-
-<br>
-
-<input type="radio" name="edad" value="60100"> 60-100</td>
-
-<td>&iquest;C&oacute;mo nos conociste?<br>
-
-<input type="checkbox" name="conocer">
-
-A trav&eacute;s de un amigo.<br>
-
-<input type="checkbox" name="conocer">
-
-A trav&eacute;s de un buscador.<br>
-
-<input type="checkbox" name="conocer">
-
-Navegando por la red.<br>
-
-<input type="checkbox" name="conocer">
-
-Otros</td>
-
-</tr>
-
-</table>
-
-Opinión sobre nuestra p&aacute;gina web<br>
-
-<textarea cols="40" rows="5" name="opinion">Escriba aquí su opinión...</textarea>
-
-<br><br>
-
-Tiene alguna sugerencia...
-
-<br>
-
-<textarea cols="40" rows="5" name="sugerencias">Escriba aquí sus sugerencias...</textarea>
-
-<br><br>
-
-&iquest;C&uacute;anto navegas por intenet? (Se&ntilde;ala la opci&oacute;n que
-
-m&aacute;s se acerque)<br>
-
-<select name="frecuencia" size="2">
-
-<option value="1">2 horas al día.
-
-<option value="2">4 horas al día.
-
-<option value="3">10 horas a la semana.
-
-<option value="4">20 horas al mes.
-
-</select>
-
-<br>
-
-<br>
-
-<table width="50%" border="0" align="center" cellpadding="10" cellspacing="0">
-
-<tr>
-
-<td><div align="center">
-
-<input type="submit" value="Enviar formulario">
-
-</div></td>
-
-<td><div align="center">
-
-<input type="Reset" value="Borrar formulario">
-
-</div></td>
-
-</tr>
-
-</table>
-
-</form>
 <center>
-<a href="Web_Hosting.view.php">
-<link rel="stylesheet" href="Web_Hosting.view%20Archivos/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<button id="regresar" type="submit" class="btn btn-light">RETURN</button>	
-</a>
-</center>
+	<a href="Web_Hosting.view.php">
+	<link rel="stylesheet" href="Web_Hosting.view%20Archivos/bootstrap.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--BUTTON RETURN INICIO -->
+	<!--<button id="regresar" type="submit" class="btn btn-light">RETURN</button>	-->
+	</a>
+</center> 
 </body>
 </html>
