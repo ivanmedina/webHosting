@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -210,7 +213,7 @@
 	<br>
 	<!-- BOTON ADMINISTRADOR PARA INGRESAR A LOGIN -->
 	<!--<font size="5px"> <a id="administrador" href="login.php" style="color:white">  &nbsp&nbsp Administrador</a> </font>-->
-	<a href="login.php"><button id="admin" type="button" class="btn btn-secondary">Login</button></a><br>
+	<a href="cuenta.php"><button id="admin" type="button" class="btn btn-secondary">Mi cuenta</button></a><br>
 	</section>
 
 	<!-- footer solamente parte inferior derecha -->

@@ -1,6 +1,10 @@
 <?php
-require_once './../administrador/oferta.entidad.php';
-require_once './../administrador/oferta.model.php';
+
+	session_start();
+
+
+require_once './../models/oferta.entidad.php';
+require_once './../models/oferta.model.php';
 
 // Logica
 $alm = new Oferta();

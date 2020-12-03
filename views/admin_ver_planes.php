@@ -1,19 +1,30 @@
 <?php
-require_once 'sugerencia.entidad.php';
-require_once 'sugerencia.model.php';
+
+    session_start();
+    if (isset($_SESSION['usuario'])) {
+        if($_SESSION['usuario']!='admin')
+        {
+            header("Location: admin_login.php");
+        }
+    }else{
+        header("Location: admin_login.php");
+    }
+
+require_once './../models/plan.entidad.php';
+require_once './../models/plan.model.php';
 
 
 // Logica
-$alm = new Sugerencia();
-$model = new sugerenciaModel();
-
+$alm = new Plan();
+$model = new planModel();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="../css/estilos.css">	
+	<link rel="stylesheet" href="./../css/estilos.css">	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="./../js/DataTables/jQuery-3.3.1/jquery-3.3.1.js"></script>
@@ -24,22 +35,22 @@ $model = new sugerenciaModel();
 </head>
 <header>
     <a href="compa.php">
-        <img id="compañia" src="../css/imagenes/compañia.png">
+        <img id="compañia" src="./../css/imagenes/compañia.png">
     </a>
     <a href="servicios.php">
-        <img id="servicios" src="../css/imagenes/servicios.png">
+        <img id="servicios" src="./../css/imagenes/servicios.png">
     </a>
     <a href="soluciones.php">
-         <img id="soluciones" src="../css/imagenes/soluciones.png">
+         <img id="soluciones" src="./../css/imagenes/soluciones.png">
     </a>
     <a href="cliente_p.php">
-        <img id="clientes" src="../css/imagenes/clientes.png"> 
+        <img id="clientes" src="./../css/imagenes/clientes.png"> 
     </a>
     <a href="contacto.view.php">
-        <img id="contacto" src="../css/imagenes/contacto.png">
+        <img id="contacto" src="./../css/imagenes/contacto.png">
     </a>
 
-<body background="../css/imagenes/fondo.png">
+<body background="./../css/imagenes/fondo.png">
     <div >
         <h1 style="margin:0;">Bienvenido administrador</h1>
     </div>
@@ -52,28 +63,39 @@ $model = new sugerenciaModel();
     </div>
 
     <div>
-        <h4 style="margin-top:20px;"> <a href="./index.php">Adminstrador</a> > Sugerencias</a> </h4>
+        <h4 style="margin-top:20px;"> <a href="./admin.php">Adminstrador</a> > <a href="./admin_planes.php">Planes</a> > Ver planes</h4>
     </div>
-    <div id="serviciosAdmin" class="row">
+    <div id="planesAdmin" class="row">
 
-        <div id="verServicios" class="col s12">
+        <div id="verPlanes" class="col s12">
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">id</th>
-                        <th style="text-align:left;">Nombre</th>
-                        <th style="text-align:left;">E-mail</th>
-                        <th style="text-align:left;">Sugerencia</th>
+                        <th style="text-align:left;">ID</th>
+                        <th style="text-align:left;">USUARIO</th>
+                        <th style="text-align:left;">SERVICIO</th>
+                        <th style="text-align:left;">INCIO</th>
+                        <th style="text-align:left;">FIN</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($model->Listar() as $r): ?>
+                <?php foreach($model->Listar() as $r): ?>
                         <tr>
-                            <td><?php echo $r->__GET('id'); ?></td>
-                            <td><?php echo $r->__GET('nombre'); ?></td>
-                            <td><?php echo $r->__GET('email'); ?></td>
-                            <td><?php echo $r->__GET('sugerencia'); ?></td>
+                        <td><?php echo $r->__GET('id'); ?></td>
+                            <td><?php echo $r->__GET('usuario'); ?></td>
+                            <td><?php echo $r->__GET('oferta'); ?></td>
+                            <td><?php echo $r->__GET('inicio'); ?></td>
+                            <td><?php echo $r->__GET('fin'); ?></td>
+                            <td>
+                                <a href="./admin_editar_plan.php?action=editar&id=<?php echo $r->id; ?>" style="color:black">Editar</a>
+                            </td>
+                            <td>
+                                <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Cancelar</a>
+                            </td>
                         </tr>
+
                     <?php endforeach; ?>
                 </tbody>
             </table>   

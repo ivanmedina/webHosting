@@ -1,8 +1,8 @@
 <?php 
-	// session_start();
-	// if (!isset($_SESSION['usuario'])) {
-	// 	header('Location: index.php');
-	// }
+	session_start();
+	if (!isset($_SESSION['usuario'])) {
+		header('Location: login.php');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
 		<h1>BIENVENIDO A TU CUENTA </h1>
 	</div>
 	<p></p>
-	<form class="w3-container" action="controller_login.php" method="post">
+	<form class="w3-container" action="./../controllers/controller_logout.php" method="post">
 		<input type="hidden" name="salir" value="salir">
 		<button class="w3-btn w3-green">Salir</button>
 	</form>

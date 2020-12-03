@@ -1,6 +1,18 @@
 <?php
-require_once 'plan.entidad.php';
-require_once 'plan.model.php';
+
+    session_start();
+    if (isset($_SESSION['usuario'])) {
+        if($_SESSION['usuario']!='admin')
+        {
+            header("Location: admin_login.php");
+        }
+    }else{
+        header("Location: admin_login.php");
+    }
+
+
+require_once './../models/plan.entidad.php';
+require_once './../models/plan.model.php';
 
 
 // Logica
@@ -49,7 +61,7 @@ if(isset($_REQUEST['action']))
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="../css/estilos.css">	
+	<link rel="stylesheet" href="./../css/estilos.css">	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="text/javascript" src="./../js/DataTables/jQuery-3.3.1/jquery-3.3.1.js"></script>
@@ -60,22 +72,22 @@ if(isset($_REQUEST['action']))
 </head>
 <header>
     <a href="compa.php">
-        <img id="compañia" src="../css/imagenes/compañia.png">
+        <img id="compañia" src="./../css/imagenes/compañia.png">
     </a>
     <a href="servicios.php">
-        <img id="servicios" src="../css/imagenes/servicios.png">
+        <img id="servicios" src="./../css/imagenes/servicios.png">
     </a>
     <a href="soluciones.php">
-         <img id="soluciones" src="../css/imagenes/soluciones.png">
+         <img id="soluciones" src="./../css/imagenes/soluciones.png">
     </a>
     <a href="cliente_p.php">
-        <img id="clientes" src="../css/imagenes/clientes.png"> 
+        <img id="clientes" src="./../css/imagenes/clientes.png"> 
     </a>
     <a href="contacto.view.php">
-        <img id="contacto" src="../css/imagenes/contacto.png">
+        <img id="contacto" src="./../css/imagenes/contacto.png">
     </a>
 
-<body background="../css/imagenes/fondo.png">
+<body background="./../css/imagenes/fondo.png">
     <div >
         <h1 style="margin:0;">Bienvenido administrador</h1>
     </div>
@@ -88,7 +100,7 @@ if(isset($_REQUEST['action']))
     </div>
 
     <div>
-        <h4 style="margin-top:20px;"> <a href="./index.php">Adminstrador</a> > <a href="./admin_servicios.php">Servicios</a> > Ver servicios</h4>
+        <h4 style="margin-top:20px;"> <a href="./admin.php">Adminstrador</a> > <a href="./admin_servicios.php">Servicios</a> > Ver servicios</h4>
     </div>
     <div id="serviciosAdmin" class="row">
 

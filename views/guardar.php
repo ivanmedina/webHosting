@@ -1,12 +1,12 @@
 <?php
 	//conectamos Con el servidor
-	$conectar=@mysql_connect('localhost','root','');
+	$conectar=@mysql_connect('localhost','user','password');
 	//verificamos la conexion
 	if(!$conectar){
 		echo"No Se Pudo Conectar Con El Servidor";
 	}else{
 
-		$base=mysql_select_db('bs_slider');
+		$base=mysql_select_db('webHosting');
 		if(!$base){
 			echo"No Se Encontro La Base De Datos";			
 		}
@@ -14,9 +14,9 @@
 	//recuperar las variables
 	$nombre=$_POST['nombre'];
 	$email=$_POST['email'];
-	$sugerencia=$_POST['sugerencia'];
+	$sugerencia=$_POST['sugerencias'];
 	//hacemos la sentencia de sql
-	$sql="INSERT INTO sugerencia VALUES('$nombre',
+	$sql="INSERT INTO sugerencias VALUES('$nombre',
 								   '$email',
 								   '$sugerencia')";
 	//ejecutamos la sentencia de sql
@@ -34,5 +34,5 @@
 		echo "</script>";
 	}
 
-	include ("Web_Hosting.view.php")
+	include ("index.php")
 ?>

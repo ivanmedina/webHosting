@@ -1,30 +1,45 @@
+<?php 
+	session_start();
+	unset($_SESSION['usuario']);
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="../css/estilolog.css">
-    <!-- Agregamos archivo js -->
-    <script src="../js/jsLogin.js"></script>
-    
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 </head>
-
 <body>
-    <div class="login">
-      <div>
-        <h1>Login</h1>
-        <form id="inicio" name="inicio" method="post">
-          <input type="text" name="usuario" placeholder="Username" required="required" id="user"/>
-          <input type="password" name="pswrd" placeholder="Password" required="required" id="pswrd"  />
-          <input type="button" class="btn btn-primary btn-block btn-large" value="Ingresar" onclick="valida_usuario()"/>
-        </form>
-        <script src='https://www.google.com/recaptcha/api.js'></script><br>
-        <div class="g-recaptcha" data-sitekey="6LeX13oUAAAAAN5HPNpWwuv9oRysDSoVvYxSw-LM"></div>
-        <p>Nota: Tienes 3 intentos para ingresar.</p>
-      </div>
-    </div>
-    
+<header>
+	<div class="w3-container w3-black w3-center">
+		<h1>BIENVENIDO </h1>
+	</div>
+</header>
+
+	
+	<div class="w3-container w3-green">
+		<h2>Login</h2>
+	</div>
+
+	<form class="w3-container" action="./../controllers/controller_login.php" method="post">
+		<p>
+			<label class="w3-label">
+				Usuario
+			</label>
+			<input class="w3-input w3-border " type="text" name="usuario">
+		</p>
+		<p>
+			<label class="w3-label">Password</label>
+			<input class="w3-input w3-border" type="password" name="pas">
+		</p>
+		<p>
+			<button class="w3-btn w3-green">Aceptar</button>
+		</p>
+		<p>Si aún no tienes cuenta ve al siguiente link <a href="registrarse.php">Registrarse</a></p>
+	</form>
+<footer>
+	<div class="w3-container w3-black">
+	</div>
+</footer>
 </body>
 </html>

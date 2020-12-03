@@ -1,33 +1,37 @@
+<?php 
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="../css/estilos.css">	
+	<link rel="stylesheet" href="./../css/estilos.css">	
 		
 	<title>The Web Hosting</title>
 </head>
-<body background="../css/imagenes/fondo.png">
+<body background="./../css/imagenes/fondo.png">
 <section id="contenedor">
 <a id="ver" href="#">
 
 <picture>
 <header>
 		<a href="compa.php">
-			<img id="compañia" src="../css/imagenes/compañia.png">
+			<img id="compañia" src="./../css/imagenes/compañia.png">
 		</a>
 		<a href="servicios.php">
-			<img id="servicios" src="../css/imagenes/servicios.png">
+			<img id="servicios" src="./../css/imagenes/servicios.png">
 		</a>
 <a href="soluciones.php">
-			<img id="soluciones" src="../css/imagenes/soluciones.png">
+			<img id="soluciones" src="./../css/imagenes/soluciones.png">
 		</a>
 <a href="cliente_p.php">
-			<img id="clientes" src="../css/imagenes/clientes.png"> 
+			<img id="clientes" src="./../css/imagenes/clientes.png"> 
 		</a>
 
 		<a href="contacto.view.php">
-			<img id="contacto" src="../css/imagenes/contacto.png">
+			<img id="contacto" src="./../css/imagenes/contacto.png">
 		</a> 	
 </header>
 		<center>
@@ -40,11 +44,11 @@ Queremos asegurarnos de que le saca el máximo partido a todas las herramientas 
  Esa es la razón por la que hemos desarrollado un soporte integral y un centro de información con cientos de artículos en nuestra base de conocimientos con capacidad de búsqueda, así como manuales descargables.
  Todo respaldado por nuestro incomparable soporte al cliente, accesible todos los días por email, teléfono o chat en vivo.
 </p>
-<img src="../css/imagenes/ayuda.png">
+<img src="./../css/imagenes/ayuda.png">
 <br><br>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <a href="Web_Hosting.view.php"><button type="button" class="btn btn-secondary btn-lg btn-block">INICIO</button></a>
+    <a href="index.php"><button type="button" class="btn btn-secondary btn-lg btn-block">INICIO</button></a>
 </section>
 
     </picture>
@@ -52,7 +56,7 @@ Queremos asegurarnos de que le saca el máximo partido a todas las herramientas 
 
 <footer>
 		<a id="mapa" href="mapa.view.php">
-            <img src="../css/imagenes/maps.png" alt="">
+            <img src="./../css/imagenes/maps.png" alt="">
 		</a>
 
 

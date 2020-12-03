@@ -1,3 +1,8 @@
+<?php 
+	session_start();
+	unset($_SESSION['usuario']);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +20,7 @@
 			<h1>Registrarse</h1>
 		</div>
 		<div>
-			<form class="w3-container" action="controller_register.php" method="post">
+			<form class="w3-container" action="./../controllers/controller_register.php" method="post">
 				<p>
 					<label class="w3-label">Nombre de usuario o correo electrónico</label>
 					<input class="w3-input w3-border" type="text" name="usuario">

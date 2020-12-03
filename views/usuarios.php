@@ -1,3 +1,6 @@
+<?php 
+	session_start();
+?>
 <?php
 
 //Obtenemos la IP del visitante y la hora actual.

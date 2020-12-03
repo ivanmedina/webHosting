@@ -1,10 +1,13 @@
 <?php
-// require_once './../administrador/oferta.entidad.php';
-// require_once './../administrador/oferta.model.php';
-
-// Logica
-// $alm = new Oferta();
-// $model = new OfertaModel();
+    session_start();
+    if (isset($_SESSION['usuario'])) {
+        if($_SESSION['usuario']!='admin')
+        {
+            header("Location: admin_login.php");
+        }
+    }else{
+        header("Location: admin_login.php");
+    }
 
 ?>
 <!DOCTYPE html>
@@ -12,7 +15,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="../css/estilos.css">	
+	<link rel="stylesheet" href="./../css/estilos.css">	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -20,22 +23,22 @@
 </head>
 <header>
     <a href="compa.php">
-        <img id="compañia" src="../css/imagenes/compañia.png">
+        <img id="compañia" src="./../css/imagenes/compañia.png">
     </a>
     <a href="servicios.php">
-        <img id="servicios" src="../css/imagenes/servicios.png">
+        <img id="servicios" src="./../css/imagenes/servicios.png">
     </a>
     <a href="soluciones.php">
-         <img id="soluciones" src="../css/imagenes/soluciones.png">
+         <img id="soluciones" src="./../css/imagenes/soluciones.png">
     </a>
     <a href="cliente_p.php">
-        <img id="clientes" src="../css/imagenes/clientes.png"> 
+        <img id="clientes" src="./../css/imagenes/clientes.png"> 
     </a>
     <a href="contacto.view.php">
-        <img id="contacto" src="../css/imagenes/contacto.png">
+        <img id="contacto" src="../../css/imagenes/contacto.png">
     </a>
 
-<body background="../css/imagenes/fondo.png">
+<body background="./../css/imagenes/fondo.png">
     
     <div >
         <h1 style="margin:0;">Bienvenido administrador</h1>
@@ -47,7 +50,7 @@
         </h3>
     </div>
     <div >
-        <h4 style="margin-top:20px;"> <a href="./index.php">Adminstrador</a> > <a href="./admin_servicios.php">Servicios</a> > Nuevo servicio</h4>
+        <h4 style="margin-top:20px;"> <a href="./admin.php">Adminstrador</a> > <a href="./admin_planes.php">Planes</a> > Nuevo servicio</h4>
     </div>
     <div id="opciones" style="margin-top:50px;">
         <div class="row">
@@ -55,14 +58,14 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text row">
                         <div class="col s8">
-                            <a href="./nuevo_servicio.php">
+                            <a href="./admin_ver_planes.php">
                                 <h3>
-                                    Nuevo servicio
+                                    Ver planes
                                 </h3>
                             </a>
                         </div>
                         <div class="col s4">
-                            <i class="large material-icons" style="height:100%;width:100%;">library_add</i>
+                            <i class="large material-icons" style="height:100%;width:100%;">local_library</i>
                         </div>
 
                     </div>
@@ -72,14 +75,14 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text row">
                     <div class="col s8">
-                            <a href="./ver_servicios.php">
+                            <a href="./admin_dashboards.php">
                                 <h3>
-                                    Ver servicios
+                                    Ver dashboards
                                 </h3>
                             </a>
                         </div>
                         <div class="col s4">
-                            <i class="large material-icons" style="height:100%;width:100%;">library_books</i>
+                            <i class="large material-icons" style="height:100%;width:100%;">equalizer</i>
                         </div>
                     </div>
                 </div>
@@ -91,7 +94,7 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text row">
                     <div class="col s8">
-                            <a href="./index.php">
+                            <a href="./admin.php">
                                 <h3>
                                     Salir
                                 </h3>

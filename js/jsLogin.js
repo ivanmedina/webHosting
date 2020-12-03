@@ -4,9 +4,9 @@ function valida_usuario(){
 var usuario = document.getElementById("user").value;
 var contraseña = document.getElementById("pswrd").value;
 
-if ( usuario == "123" && contraseña == "abcd"){
+if ( usuario == "admin" && contraseña == "abcd"){
 alert ("Ingreso correcto");
-window.location ="../administrador/index.php"; // Redirige a otra pagina
+window.location ="../views/admin.php"; // Redirige a otra pagina
 return false;
 
 }

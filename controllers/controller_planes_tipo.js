@@ -1,7 +1,7 @@
 TIPO = async () => {
 
   
-    let datos = await fetch('http://localhost/webU/administrador/model_planes_tipo.php');
+    let datos = await fetch('http://localhost/webHosting/models/model_planes_tipo.php');
     datos = await datos.json();
     keys=Object.keys(datos);
     values=Object.values(datos);

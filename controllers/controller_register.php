@@ -1,7 +1,7 @@
 <?php 
 
-    require_once('usuario.entidad.php');
-	require_once('usuario.model.php');
+    require_once('./../models/usuario.entidad.php');
+	require_once('./../models/usuario.model.php');
     $model=new UsuarioModel();
     $user=new Usuario();
     $user->__SET('nombre',$_POST['usuario']);
@@ -9,11 +9,11 @@
     if($model->buscarUsuario($user->__GET('nombre'))){
         
         $model->Insertar($user);
-        header('Location: login.php');
+        header('Location: ./../views/login.php');
 
     }
     else{
-        header('Location: error.php?mensaje=El nombre de usuario ya existe');
+        header('Location: ./../views/error.php?mensaje=El nombre de usuario ya existe');
     }
 
 

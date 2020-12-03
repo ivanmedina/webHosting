@@ -23,10 +23,7 @@
 	<title>The Web Hosting</title>
 </head>
 <body background="css/imagenes/fondo.png">
-
-		<form class="formulario" >
-				
+		<form class="formulario" >		
 		</form>
-
 </body>
 </html>
