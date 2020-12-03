@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <!-- Agregamos rchivo css-->
+    <link rel="stylesheet" href="../css/estiloLogin.css">
+    <!-- Agregamos archivo js -->
+    <script src="../js/jsLogin.js"></script>
+  </head>
+
+<body>
+    <div class="container">
+      
+      <div class="main">
+      
+      <h2>Acceso al Registro</h2>
+      <form id="inicio" method="post" name="inicio">
+        
+        <label>Usuario:</label>
+        <input type="text" name="usuario" id="usuario">
+
+        <label>Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña">
+        
+        #boton enviar
+        <input type="button" value="Ingresar" id="submit" onclick="valida_usuario()"/>
+        
+        <br>
+        <br>
+        
+        #boton limpiar
+        <input type="reset" value="Limpiar">
+        
+        <br>
+       #captcha
+        <script src='https://www.google.com/recaptcha/api.js'></script><br>
+        <div class="g-recaptcha" data-sitekey="6LeX13oUAAAAAN5HPNpWwuv9oRysDSoVvYxSw-LM"></div>
+      </form>
+        <br>  <br>
+        <span><b class="nota">Nota: <br>Tienes solo 3 intentos para ingresar.</b>
+      </div>
+    </div>
+  </body>
+</html>
