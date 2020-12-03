@@ -3,65 +3,29 @@
 
     require_once './../models/oferta.entidad.php';
     require_once './../models/oferta.model.php';
+    require_once './../models/plan.entidad.php';
+    require_once './../models/plan.model.php';
 // Logica
 $alm = new Oferta();
 $model = new OfertaModel();
+$plan=new Plan();
+$modelP=new planModel();
 
 if(isset($_REQUEST['action']))
 {
 	switch($_REQUEST['action'])
 	{
-		case 'actualizar':
-			$alm->__SET('id',              $_REQUEST['id']);
-			$alm->__SET('nombre',          $_REQUEST['nombre']);
-			$alm->__SET('precio',        $_REQUEST['precio']);
-			$alm->__SET('espacio',            $_REQUEST['espacio']);
-			$alm->__SET('transferencia', $_REQUEST['transferencia']);
-            $alm->__SET('sitio',              $_REQUEST['sitio']);
-            $alm->__SET('registro',          $_REQUEST['registro']);
-            $alm->__SET('cuentas',        $_REQUEST['cuentas']);
-            $alm->__SET('bases',            $_REQUEST['bases']);
-            $alm->__SET('subdominios', $_REQUEST['subdominios']);
-            $alm->__SET('garantia',              $_REQUEST['garantia']);
-            $alm->__SET('panel',          $_REQUEST['panel']);
-            $alm->__SET('tecnologia',        $_REQUEST['tecnologia']);
-            $alm->__SET('soporte',            $_REQUEST['soporte']);
-            $alm->__SET('vencimiento', $_REQUEST['vencimiento']);
-
-			$model->Actualizar($alm);
-			header('Location: admin_ver_servicios.php');
+        case 'registrar':
+            if (!isset($_SESSION['idusuario'])) {
+                header('Location: login.php');
+            }
+            
+            $plan->__SET('usuario', $_SESSION['idusuario']);
+            $plan->__SET('oferta',  $_REQUEST['id']);
+            $modelP->Registrar($plan);
+            echo "<script>alert('servicio adquirido');</script>";
 			break;
 
-		case 'registrar':
-            $alm->__SET('id',              $_REQUEST['id']);
-            $alm->__SET('nombre',          $_REQUEST['nombre']);
-            $alm->__SET('precio',        $_REQUEST['precio']);
-            $alm->__SET('espacio',            $_REQUEST['espacio']);
-            $alm->__SET('transferencia', $_REQUEST['transferencia']);
-            $alm->__SET('sitio',              $_REQUEST['sitio']);
-            $alm->__SET('registro',          $_REQUEST['registro']);
-            $alm->__SET('cuentas',        $_REQUEST['cuentas']);
-            $alm->__SET('bases',            $_REQUEST['bases']);
-            $alm->__SET('subdominios', $_REQUEST['subdominios']);
-            $alm->__SET('garantia',              $_REQUEST['garantia']);
-            $alm->__SET('panel',          $_REQUEST['panel']);
-            $alm->__SET('tecnologia',        $_REQUEST['tecnologia']);
-            $alm->__SET('soporte',            $_REQUEST['soporte']);
-            $alm->__SET('vencimiento', $_REQUEST['vencimiento']);
-
-
-			$model->Registrar($alm);
-			header('Location: admin_ver_servicios.php');
-			break;
-
-		case 'eliminar':
-			$model->Eliminar($_REQUEST['id']);
-			header('Location: admin_ver_servicios.php');
-			break;
-
-		case 'editar':
-			$alm = $model->Obtener($_REQUEST['id']);
-			break;
 	}
 }
 ?>
@@ -97,7 +61,14 @@ if(isset($_REQUEST['action']))
                         <th style="text-align:left;">Precio</th>
                         <th style="text-align:left;">Espacio</th>
                         <th style="text-align:left;">Transferencia</th>
-                        <th></th>
+                        <th style="text-align:left;">Sitios</th>
+                        <th style="text-align:left;">Registro</th>
+                        <th style="text-align:left;">Cuentas</th>
+                        <th style="text-align:left;">Subdominios</th>
+                        <th style="text-align:left;">Plan</th>
+                        <th style="text-align:left;">Tecnologia</th>
+                        <th style="text-align:left;">Soporte</th>
+                        <th style="text-align:left;">Vencimiento</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -108,11 +79,16 @@ if(isset($_REQUEST['action']))
                             <td><?php echo $r->__GET('precio'); ?></td>
                             <td><?php echo $r->__GET('espacio'); ?></td>
                             <td><?php echo $r->__GET('transferencia'); ?></td>
+                            <td><?php echo $r->__GET('sitio'); ?></td>
+                            <td><?php echo $r->__GET('registro'); ?></td>
+                            <td><?php echo $r->__GET('cuentas'); ?></td>
+                            <td><?php echo $r->__GET('subdominios'); ?></td>
+                            <td><?php echo $r->__GET('panel'); ?></td>
+                            <td><?php echo $r->__GET('tecnologia'); ?></td>
+                            <td><?php echo $r->__GET('soporte'); ?></td>
+                            <td><?php echo $r->__GET('vencimiento')." dias"; ?></td>
                             <td>
-                                <a href="?action=editar&id=<?php echo $r->id; ?>" style="color:black">Editar</a>
-                            </td>
-                            <td>
-                                <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Eliminar</a>
+                                <a href="?action=registrar&id=<?php echo $r->id; ?>" style="color:black">Comprar</a>
                             </td>
                         </tr>
 

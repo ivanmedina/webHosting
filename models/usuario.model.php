@@ -132,7 +132,6 @@ class UsuarioModel
 			$stm->execute(array($id));
 			$r = $stm->fetch(PDO::FETCH_OBJ);
 			$user=new Usuario();
-
 				$user->__SET('id', $r->id);
 				$user->__SET('nombre', $r->nombre);
 				$user->__SET('clave', $r->clave);
@@ -143,7 +142,7 @@ class UsuarioModel
 		}
 	}
 	public function ObtenerUsuario($nombre)
-	{
+	{	
 		try 
 		{
 			$stm = $this->pdo ->prepare("SELECT * FROM USUARIOS WHERE nombre = ?");

@@ -55,6 +55,36 @@ class planModel
 			die($e->getMessage());
 		}
 	}
+	public function ListarxUsuario($id)
+	{
+		try
+		{
+			$result = array();
+
+			$stm = $this->pdo->prepare("SELECT of.nombre as oferta ,pl.inicio,pl.fin
+										FROM planes pl
+										join USUARIOS us on pl.idusuario=us.id
+										join oferta of on pl.idoferta=of.id
+										where pl.idusuario=?
+										");
+			$stm->execute(array($id));
+
+			foreach($stm->fetchAll(PDO::FETCH_OBJ) as $r)
+			{
+				$alm = new Plan();
+				$alm->__SET('oferta', $r->oferta);
+				$alm->__SET('inicio', $r->inicio);
+				$alm->__SET('fin', $r->fin);
+				$result[] = $alm;
+			}
+
+			return $result;
+		}
+		catch(Exception $e)
+		{
+			die($e->getMessage());
+		}
+	}
 
 	public function ListarTipoPlanes()
 	{
@@ -168,15 +198,16 @@ class planModel
 	{		
 		try 
 		{
-		$sql = "INSERT INTO planes (usuario,oferta,inicio,fin) 
-		        VALUES (?, ?, ?)";
+
+			
+		$sql = "INSERT INTO planes(idusuario, idoferta, inicio, fin)
+		VALUES (?,?,CURRENT_TIMESTAMP,DATE_ADD(CURRENT_TIMESTAMP, INTERVAL (select vencimiento from oferta where id=?)  DAY))";
 
 		$this->pdo->prepare($sql)->execute(
 			array(
 					$data->__GET('usuario'), 
 					$data->__GET('oferta'),
-					$data->__GET('inicio'),				
-					$data->__GET('fin')				
+					$data->__GET('oferta')
 				)
 			);
 		} catch (Exception $e) 

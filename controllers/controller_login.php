@@ -10,16 +10,15 @@
 
 	$user->__SET('nombre',$_POST['usuario']);
 	$user->__SET('clave',$_POST['pas']);
-	// print_r($user->__GET('nombre'));
+
 	
 
     if(!$model->buscarUsuario($user->__GET('nombre'))){
         
 		$validate=$model->obtenerUsuario($user->__GET('nombre'));	
 		if($validate->clave==$user->clave){
-			$_SESSION['usuario']=$user->__GET('nombre');
-            $_SESSION['idusuario']=$user->__GET('id');
-
+			$_SESSION['usuario']=$validate->__GET('nombre');
+            $_SESSION['idusuario']=$validate->__GET('id');
 			header('Location: ./../views/cuenta.php'); //envia a la página que simula la cuenta
 		}
 		else{
