@@ -57,19 +57,19 @@ $model = new sugerenciaModel();
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">id</th>
-                        <th style="text-align:left;">Nombre</th>
-                        <th style="text-align:left;">E-mail</th>
-                        <th style="text-align:left;">Sugerencia</th>
+                        <th style="text-align:center;">id</th>
+                        <th style="text-align:center;">Nombre</th>
+                        <th style="text-align:center;">E-mail</th>
+                        <th style="text-align:center;">Sugerencia</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach($model->Listar() as $r): ?>
                         <tr>
-                            <td><?php echo $r->__GET('id'); ?></td>
-                            <td><?php echo $r->__GET('nombre'); ?></td>
-                            <td><?php echo $r->__GET('email'); ?></td>
-                            <td><?php echo $r->__GET('sugerencia'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('id'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('nombre'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('email'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('sugerencia'); ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

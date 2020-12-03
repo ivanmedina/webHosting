@@ -62,11 +62,11 @@ if(isset($_REQUEST['action']))
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">ID</th>
-                        <th style="text-align:left;">USUARIO</th>
-                        <th style="text-align:left;">SERVICIO</th>
-                        <th style="text-align:left;">INCIO</th>
-                        <th style="text-align:left;">FIN</th>
+                        <th style="text-align:center;">ID</th>
+                        <th style="text-align:center;">USUARIO</th>
+                        <th style="text-align:center;">SERVICIO</th>
+                        <th style="text-align:center;">INCIO</th>
+                        <th style="text-align:center;">FIN</th>
   
                         <th></th>
                     </tr>
@@ -74,12 +74,12 @@ if(isset($_REQUEST['action']))
                 <tbody>
                 <?php foreach($model->Listar() as $r): ?>
                         <tr>
-                        <td><?php echo $r->__GET('id'); ?></td>
-                            <td><?php echo $r->__GET('usuario'); ?></td>
-                            <td><?php echo $r->__GET('oferta'); ?></td>
-                            <td><?php echo $r->__GET('inicio'); ?></td>
-                            <td><?php echo $r->__GET('fin'); ?></td>
-                            <td>
+                            <td style="text-align:center;"><?php echo $r->__GET('id'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('usuario'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('oferta'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('inicio'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('fin'); ?></td>
+                            <td style="text-align:center;">
                                 <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Cancelar</a>
                             </td>
                         </tr>

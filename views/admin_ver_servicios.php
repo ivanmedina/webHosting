@@ -103,16 +103,18 @@ if(isset($_REQUEST['action']))
     <div>
         <h4 style="margin-top:20px;"> <a href="./admin.php">Adminstrador</a> > <a href="./admin_servicios.php">Servicios</a> > Ver servicios</h4>
     </div>
+    <center>
+    
     <div id="serviciosAdmin" class="row">
 
         <div id="verServicios" class="col s12">
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">Nombre</th>
-                        <th style="text-align:left;">Precio</th>
-                        <th style="text-align:left;">Espacio</th>
-                        <th style="text-align:left;">Transferencia</th>
+                        <th style="text-align:center;">Nombre</th>
+                        <th style="text-align:center;">Precio</th>
+                        <th style="text-align:center;">Espacio</th>
+                        <th style="text-align:center;">Transferencia</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -120,14 +122,14 @@ if(isset($_REQUEST['action']))
                 <tbody>
                 <?php foreach($model->Listar() as $r): ?>
                         <tr>
-                            <td><?php echo $r->__GET('nombre'); ?></td>
-                            <td><?php echo $r->__GET('precio'); ?></td>
-                            <td><?php echo $r->__GET('espacio'); ?></td>
-                            <td><?php echo $r->__GET('transferencia'); ?></td>
-                            <td>
+                            <td style="text-align:center;"><?php echo $r->__GET('nombre'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('precio'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('espacio'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('transferencia'); ?></td>
+                            <td style="text-align:center;">
                                 <a href="?action=editar&id=<?php echo $r->id; ?>" style="color:black">Editar</a>
                             </td>
-                            <td>
+                            <td style="text-align:center;">
                                 <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Eliminar</a>
                             </td>
                         </tr>
@@ -142,46 +144,46 @@ if(isset($_REQUEST['action']))
                 <table style="width:1280px;" >
                     <tr>
                         <th style="text-align:left;">Nombre</th>
-                        <td><input  type="text" name="nombre" value="<?php echo $alm->__GET('nombre'); ?>"  required /></td>
+                        <td><input class="browser-default"  type="text" name="nombre" value="<?php echo $alm->__GET('nombre'); ?>"  required /></td>
                         <th style="text-align:left;">Precio Mensual</th>
-                        <td><input type="text" name="precio" value="<?php echo $alm->__GET('precio'); ?>" required /></td>
+                        <td><input class="browser-default" type="text" name="precio" value="<?php echo $alm->__GET('precio'); ?>" required /></td>
                     </tr>
                     <tr>
                         <th style="text-align:left;">Espacio en Disco</th>
-                        <td><input type="text" name="espacio" value="<?php echo $alm->__GET('espacio'); ?>" style="width:100%;" required/></td>
+                        <td><input class="browser-default" type="text" name="espacio" value="<?php echo $alm->__GET('espacio'); ?>" style="width:100%;" required/></td>
                         <th style="text-align:left;">Transferencia Mensual</th>
-                        <td><input type="text" name="transferencia" value="<?php echo $alm->__GET('transferencia'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="transferencia" value="<?php echo $alm->__GET('transferencia'); ?>" style="width:100%;" required /></td>
                     </tr>
 
                     <tr>
                         <th style="text-align:left;">Sitios a hospedar</th>
-                        <td><input type="text" name="sitio" value="<?php echo $alm->__GET('sitio'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="sitio" value="<?php echo $alm->__GET('sitio'); ?>" style="width:100%;" required /></td>
                         <th style="text-align:left;">Reg. de Dominio Incluido</th>
-                        <td><input type="text" name="registro" value="<?php echo $alm->__GET('registro'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="registro" value="<?php echo $alm->__GET('registro'); ?>" style="width:100%;" required /></td>
                     </tr>
                     <tr>
                         <th style="text-align:left;">Cuentas de Correo</th>
-                        <td><input type="text" name="cuentas" value="<?php echo $alm->__GET('cuentas'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="cuentas" value="<?php echo $alm->__GET('cuentas'); ?>" style="width:100%;" required /></td>
                         <th style="text-align:left;">Bases de Datos</th>
-                        <td><input type="text" name="bases" value="<?php echo $alm->__GET('bases'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="bases" value="<?php echo $alm->__GET('bases'); ?>" style="width:100%;" required /></td>
                     </tr>
                     <tr>
                         <th style="text-align:left;">Subdominios</th>
-                        <td><input type="text" name="subdominios" value="<?php echo $alm->__GET('subdominios'); ?>" style="width:100%;" required/></td>
+                        <td><input class="browser-default" type="text" name="subdominios" value="<?php echo $alm->__GET('subdominios'); ?>" style="width:100%;" required/></td>
                         <th style="text-align:left;">Garantía de Disponibilidad</th>
-                        <td><input type="text" name="garantia" value="<?php echo $alm->__GET('garantia'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="garantia" value="<?php echo $alm->__GET('garantia'); ?>" style="width:100%;" required /></td>
                     </tr>
                     <tr>
                         <th style="text-align:left;">Panel de Control</th>
-                        <td><input type="text" name="panel" value="<?php echo $alm->__GET('panel'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="panel" value="<?php echo $alm->__GET('panel'); ?>" style="width:100%;" required /></td>
                         <th style="text-align:left;">Tecnologia</th>
-                        <td><input type="text" name="tecnologia" value="<?php echo $alm->__GET('tecnologia'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="tecnologia" value="<?php echo $alm->__GET('tecnologia'); ?>" style="width:100%;" required /></td>
                     </tr>
                     <tr>
                         <th style="text-align:left;">Soporte</th>
-                        <td><input type="text" name="soporte" value="<?php echo $alm->__GET('soporte'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="soporte" value="<?php echo $alm->__GET('soporte'); ?>" style="width:100%;" required /></td>
                         <th style="text-align:left;">Fecha de Vencimiento</th>
-                        <td><input type="text" name="vencimiento" value="<?php echo $alm->__GET('vencimiento'); ?>" style="width:100%;" required /></td>
+                        <td><input class="browser-default" type="text" name="vencimiento" value="<?php echo $alm->__GET('vencimiento'); ?>" style="width:100%;" required /></td>
                     </tr>
                     <tr>
                         <td colspan="4"style="text-align:center;">
@@ -192,6 +194,7 @@ if(isset($_REQUEST['action']))
             </form>
         </div>
     </div>
+    </center>
 </body>
 <script>
     function startTime() {

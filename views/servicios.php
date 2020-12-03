@@ -49,7 +49,10 @@ if(isset($_REQUEST['action']))
 		<a href="servicios.php"><img id="servicios" src="../css/imagenes/servicios.png"></a>
 		<a href="soluciones.php"><img id="soluciones" src="../css/imagenes/soluciones.png"></a>
 		<a href="cliente_p.php"><img id="clientes" src="../css/imagenes/clientes.png"> </a>
-		<a href="contacto.view.php"><img id="contacto" src="../css/imagenes/contacto.png"></a> 	
+		<a href="contacto.view.php"><img id="contacto" src="../css/imagenes/contacto.png"></a>
+		<script type="text/javascript" src="./../js/DataTables/jQuery-3.3.1/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="./../js/DataTables/datatables.css">
+        <script type="text/javascript" src="./../js//DataTables/datatables.js"></script>
 	</header>
 	            <br><br><br><br>
 <center>
@@ -57,37 +60,37 @@ if(isset($_REQUEST['action']))
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">Nombre</th>
-                        <th style="text-align:left;">Precio</th>
-                        <th style="text-align:left;">Espacio</th>
-                        <th style="text-align:left;">Transferencia</th>
-                        <th style="text-align:left;">Sitios</th>
-                        <th style="text-align:left;">Registro</th>
-                        <th style="text-align:left;">Cuentas</th>
-                        <th style="text-align:left;">Subdominios</th>
-                        <th style="text-align:left;">Plan</th>
-                        <th style="text-align:left;">Tecnologia</th>
-                        <th style="text-align:left;">Soporte</th>
-                        <th style="text-align:left;">Vencimiento</th>
+                        <th style="text-align:center;">Nombre</th>
+                        <th style="text-align:center;">Precio</th>
+                        <th style="text-align:center;">Espacio</th>
+                        <th style="text-align:center;">Transferencia</th>
+                        <th style="text-align:center;">Sitios</th>
+                        <th style="text-align:center;">Registro</th>
+                        <th style="text-align:center;">Cuentas</th>
+                        <th style="text-align:center;">Subdominios</th>
+                        <th style="text-align:center;">Plan</th>
+                        <th style="text-align:center;">Tecnologia</th>
+                        <th style="text-align:center;">Soporte</th>
+                        <th style="text-align:center;">Vencimiento</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach($model->Listar() as $r): ?>
                         <tr>
-                            <td><?php echo $r->__GET('nombre'); ?></td>
-                            <td><?php echo $r->__GET('precio'); ?></td>
-                            <td><?php echo $r->__GET('espacio'); ?></td>
-                            <td><?php echo $r->__GET('transferencia'); ?></td>
-                            <td><?php echo $r->__GET('sitio'); ?></td>
-                            <td><?php echo $r->__GET('registro'); ?></td>
-                            <td><?php echo $r->__GET('cuentas'); ?></td>
-                            <td><?php echo $r->__GET('subdominios'); ?></td>
-                            <td><?php echo $r->__GET('panel'); ?></td>
-                            <td><?php echo $r->__GET('tecnologia'); ?></td>
-                            <td><?php echo $r->__GET('soporte'); ?></td>
-                            <td><?php echo $r->__GET('vencimiento')." dias"; ?></td>
-                            <td>
+                            <td style="text-align:center;"><?php echo $r->__GET('nombre'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('precio'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('espacio'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('transferencia'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('sitio'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('registro'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('cuentas'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('subdominios'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('panel'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('tecnologia'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('soporte'); ?></td>
+                            <td style="text-align:center;"><?php echo $r->__GET('vencimiento')." dias"; ?></td>
+                            <td style="text-align:center;">
                                 <a href="?action=registrar&id=<?php echo $r->id; ?>" style="color:black">Comprar</a>
                             </td>
                         </tr>
@@ -130,4 +133,16 @@ if(isset($_REQUEST['action']))
 
 	</footer>
 </body>
+<script>
+$(document).ready(function() {
+            var table=$('#table1').DataTable({
+            dom: "Bflrtip",
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+
+            });
+            // table.buttons( 1, 'csv:name' ).enable();
+        });
+</script>
 </html>

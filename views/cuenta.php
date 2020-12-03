@@ -37,17 +37,17 @@
             <table id="table1">
                 <thead>
                     <tr>
-                        <th style="text-align:left;">SERVICIO</th>
-                        <th style="text-align:left;">INCIO</th>
-                        <th style="text-align:left;">FIN</th>
+                        <th style="text-align:center;">SERVICIO</th>
+                        <th style="text-align:center;">INCIO</th>
+                        <th style="text-align:center;">FIN</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach($model->ListarxUsuario($_SESSION['idusuario']) as $r): ?>
                         <tr>
-                            <td><?php echo $r->__GET('oferta'); ?></td>
-                            <td><?php echo $r->__GET('inicio'); ?></td>
-                            <td><?php echo $r->__GET('fin'); ?></td>
+                            <td style="text-align:right;"><?php echo $r->__GET('oferta'); ?></td>
+                            <td style="text-align:right;"><?php echo $r->__GET('inicio'); ?></td>
+                            <td style="text-align:right;"><?php echo $r->__GET('fin'); ?></td>
                         </tr>
 
                     <?php endforeach; ?>
