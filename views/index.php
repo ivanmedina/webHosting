@@ -39,7 +39,7 @@
 
 		<!-- BOTONES BANNER SUPERIOR | COMPAÑIA-SERVICIOS-SOLUCIONES-CLIENTES-CONTACTO-->
 		<header>
-			<a href="compa.php"><img id="compañia" src="../css/imagenes/compañia.png"></a>
+			<a href="compa.php"><img id="compañia" src="./../css/imagenes/compañia.png"></a>
 			<a href="servicios.php"><img id="servicios" src="../css/imagenes/servicios.png"></a>
 			<a href="soluciones.php"><img id="soluciones" src="../css/imagenes/soluciones.png"></a>
 			<a href="cliente_p.php"><img id="clientes" src="../css/imagenes/clientes.png"></a>
