@@ -17,7 +17,9 @@
         
 		$validate=$model->obtenerUsuario($user->__GET('nombre'));	
 		if($validate->clave==$user->clave){
-			$_SESSION['usuario']=$usuario; //si el usuario se encuentra, crea la sesión de usuario
+			$_SESSION['usuario']=$user->__GET('nombre');
+            $_SESSION['idusuario']=$user->__GET('id');
+
 			header('Location: ./../views/cuenta.php'); //envia a la página que simula la cuenta
 		}
 		else{

@@ -17,6 +17,16 @@ require_once './../models/plan.model.php';
 // Logica
 $alm = new Plan();
 $model = new planModel();
+
+if(isset($_REQUEST['action']))
+{
+	switch($_REQUEST['action'])
+	{		case 'eliminar':
+			$model->Eliminar($_REQUEST['id']);
+			header('Location: admin_ver_planes.php');
+			break;
+	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +67,7 @@ $model = new planModel();
                         <th style="text-align:left;">SERVICIO</th>
                         <th style="text-align:left;">INCIO</th>
                         <th style="text-align:left;">FIN</th>
-                        <th></th>
+  
                         <th></th>
                     </tr>
                 </thead>
@@ -69,9 +79,6 @@ $model = new planModel();
                             <td><?php echo $r->__GET('oferta'); ?></td>
                             <td><?php echo $r->__GET('inicio'); ?></td>
                             <td><?php echo $r->__GET('fin'); ?></td>
-                            <td>
-                                <a href="./admin_editar_plan.php?action=editar&id=<?php echo $r->id; ?>" style="color:black">Editar</a>
-                            </td>
                             <td>
                                 <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Cancelar</a>
                             </td>

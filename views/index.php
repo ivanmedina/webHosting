@@ -219,7 +219,7 @@
             <img src="../css/imagenes/maps.png" alt="">
 		</a>
 
-		<form method="POST" action="guardar.php" accept-charset="utf.g">
+		<form method="POST" action="./../controllers/controller_guardar_sugerencia.php" accept-charset="utf.g">
 			<div id=name>
 				<input type="text" id="nombre" name="nombre" class="name" maxlength="30" placeholder="Ingrese su nombre"required>
 			</div>

@@ -1,5 +1,69 @@
 <?php 
 	session_start();
+
+    require_once './../models/oferta.entidad.php';
+    require_once './../models/oferta.model.php';
+// Logica
+$alm = new Oferta();
+$model = new OfertaModel();
+
+if(isset($_REQUEST['action']))
+{
+	switch($_REQUEST['action'])
+	{
+		case 'actualizar':
+			$alm->__SET('id',              $_REQUEST['id']);
+			$alm->__SET('nombre',          $_REQUEST['nombre']);
+			$alm->__SET('precio',        $_REQUEST['precio']);
+			$alm->__SET('espacio',            $_REQUEST['espacio']);
+			$alm->__SET('transferencia', $_REQUEST['transferencia']);
+            $alm->__SET('sitio',              $_REQUEST['sitio']);
+            $alm->__SET('registro',          $_REQUEST['registro']);
+            $alm->__SET('cuentas',        $_REQUEST['cuentas']);
+            $alm->__SET('bases',            $_REQUEST['bases']);
+            $alm->__SET('subdominios', $_REQUEST['subdominios']);
+            $alm->__SET('garantia',              $_REQUEST['garantia']);
+            $alm->__SET('panel',          $_REQUEST['panel']);
+            $alm->__SET('tecnologia',        $_REQUEST['tecnologia']);
+            $alm->__SET('soporte',            $_REQUEST['soporte']);
+            $alm->__SET('vencimiento', $_REQUEST['vencimiento']);
+
+			$model->Actualizar($alm);
+			header('Location: admin_ver_servicios.php');
+			break;
+
+		case 'registrar':
+            $alm->__SET('id',              $_REQUEST['id']);
+            $alm->__SET('nombre',          $_REQUEST['nombre']);
+            $alm->__SET('precio',        $_REQUEST['precio']);
+            $alm->__SET('espacio',            $_REQUEST['espacio']);
+            $alm->__SET('transferencia', $_REQUEST['transferencia']);
+            $alm->__SET('sitio',              $_REQUEST['sitio']);
+            $alm->__SET('registro',          $_REQUEST['registro']);
+            $alm->__SET('cuentas',        $_REQUEST['cuentas']);
+            $alm->__SET('bases',            $_REQUEST['bases']);
+            $alm->__SET('subdominios', $_REQUEST['subdominios']);
+            $alm->__SET('garantia',              $_REQUEST['garantia']);
+            $alm->__SET('panel',          $_REQUEST['panel']);
+            $alm->__SET('tecnologia',        $_REQUEST['tecnologia']);
+            $alm->__SET('soporte',            $_REQUEST['soporte']);
+            $alm->__SET('vencimiento', $_REQUEST['vencimiento']);
+
+
+			$model->Registrar($alm);
+			header('Location: admin_ver_servicios.php');
+			break;
+
+		case 'eliminar':
+			$model->Eliminar($_REQUEST['id']);
+			header('Location: admin_ver_servicios.php');
+			break;
+
+		case 'editar':
+			$alm = $model->Obtener($_REQUEST['id']);
+			break;
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,15 +87,46 @@
 		<a href="cliente_p.php"><img id="clientes" src="../css/imagenes/clientes.png"> </a>
 		<a href="contacto.view.php"><img id="contacto" src="../css/imagenes/contacto.png"></a> 	
 	</header>
+	            <br><br><br><br>
+<center>
+ <div id="verServicios" class="col s12">
+            <table id="table1">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;">Nombre</th>
+                        <th style="text-align:left;">Precio</th>
+                        <th style="text-align:left;">Espacio</th>
+                        <th style="text-align:left;">Transferencia</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($model->Listar() as $r): ?>
+                        <tr>
+                            <td><?php echo $r->__GET('nombre'); ?></td>
+                            <td><?php echo $r->__GET('precio'); ?></td>
+                            <td><?php echo $r->__GET('espacio'); ?></td>
+                            <td><?php echo $r->__GET('transferencia'); ?></td>
+                            <td>
+                                <a href="?action=editar&id=<?php echo $r->id; ?>" style="color:black">Editar</a>
+                            </td>
+                            <td>
+                                <a href="?action=eliminar&id=<?php echo $r->id; ?>" style="color:black">Eliminar</a>
+                            </td>
+                        </tr>
 
-    </picture>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>   
+        </div>
+        </center>
+            <br><br><br><br>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <a href="Web_Hosting.view.php"><button type="button" class="btn btn-secondary btn-lg btn-block">INICIO</button></a>
+    <a href="index.php"><button type="button" class="btn btn-secondary btn-lg btn-block">INICIO</button></a>
 
-
-    <br><br><br><br>
-    <br><br><br><br>
-    <br><br><br><br>
+    
 <footer>
 		<a id="mapa" href="mapa.view.php">
             <img src="../css/imagenes/maps.png" alt="">
